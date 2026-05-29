@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, Crosshair, Box, Activity, BookOpen, TrendingUp, MessageCircle } from "lucide-react";
+import { ArrowRight, Crosshair, Box, Activity, BookOpen, TrendingUp, MessageCircle, Clock } from "lucide-react";
 import { WHATSAPP_PROTOCOL, LOGIN_URL } from "@/lib/links";
 
 export const Route = createFileRoute("/")({
@@ -30,10 +30,10 @@ const steps = [
   { n: "03", title: "Resultado", body: "Receba o relatório completo de análise cefalométrica 3D." },
 ];
 
-const testimonials = [
-  { name: "Dr. João Silva", role: "Ortodontista, São Paulo", quote: "O Protocolo VERSA3D transformou minha abordagem diagnóstica. A precisão tridimensional é incomparável." },
-  { name: "Dra. Maria Oliveira", role: "Especialista em Ortodontia, Rio de Janeiro", quote: "Indispensável para casos complexos. A avaliação de ATM e vias aéreas num único protocolo é um diferencial enorme." },
-  { name: "Dr. Carlos Mendes", role: "Ortodontista, Belo Horizonte", quote: "Meus pacientes ficam impressionados com a clareza das imagens 3D na explicação do tratamento." },
+const metrics = [
+  { value: "6 análises", label: "em um único protocolo" },
+  { value: "5 dias úteis", label: "prazo de entrega" },
+  { value: "100% 3D", label: "sem sobreposições" },
 ];
 
 function Home() {
@@ -108,6 +108,12 @@ function Home() {
               </div>
             ))}
           </div>
+          <div className="mt-12 flex justify-center">
+            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm">
+              <Clock className="h-4 w-4 text-primary" />
+              Entrega em até 5 dias úteis após validação dos arquivos DICOM
+            </div>
+          </div>
         </div>
       </section>
 
@@ -125,25 +131,27 @@ function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="mx-auto max-w-7xl px-6 py-24 md:py-32">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-medium uppercase tracking-widest text-primary">Depoimentos</p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">O que dizem os especialistas</h2>
-        </div>
-        <div className="mt-16 grid gap-6 md:grid-cols-3">
-          {testimonials.map((t) => (
-            <figure key={t.name} className="flex flex-col rounded-2xl border border-border bg-background p-8">
-              <blockquote className="flex-1 text-base leading-relaxed text-foreground">"{t.quote}"</blockquote>
-              <figcaption className="mt-6 flex items-center gap-3">
-                <div className="aspect-square h-10 w-10 rounded-full bg-secondary" />
-                <div>
-                  <div className="text-sm font-semibold">{t.name}</div>
-                  <div className="text-xs text-muted-foreground">{t.role}</div>
-                </div>
-              </figcaption>
-            </figure>
-          ))}
+      {/* Evidence-based */}
+      <section className="relative overflow-hidden bg-dark text-dark-foreground">
+        <div className="absolute inset-0 dot-grid opacity-40" />
+        <div className="relative mx-auto max-w-7xl px-6 py-24 md:py-32">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-sm font-medium uppercase tracking-widest text-primary">Ciência</p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
+              Baseado em evidência científica
+            </h2>
+            <p className="mt-6 text-base leading-relaxed text-dark-foreground/70 md:text-lg">
+              Todas as análises do Protocolo VERSA são fundamentadas em literatura científica constantemente atualizada, garantindo diagnósticos com validade clínica comprovada.
+            </p>
+          </div>
+          <div className="mt-16 grid gap-6 md:grid-cols-3">
+            {metrics.map((m) => (
+              <div key={m.value} className="rounded-2xl border border-white/10 bg-white/5 p-8 text-center backdrop-blur-sm">
+                <div className="text-4xl font-bold tracking-tight text-primary md:text-5xl">{m.value}</div>
+                <div className="mt-3 text-sm text-dark-foreground/70">{m.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
