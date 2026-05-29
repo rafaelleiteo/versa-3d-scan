@@ -30,10 +30,10 @@ const steps = [
   { n: "03", title: "Resultado", body: "Receba o relatório completo de análise cefalométrica 3D." },
 ];
 
-const testimonials = [
-  { name: "Dr. João Silva", role: "Ortodontista, São Paulo", quote: "O Protocolo VERSA3D transformou minha abordagem diagnóstica. A precisão tridimensional é incomparável." },
-  { name: "Dra. Maria Oliveira", role: "Especialista em Ortodontia, Rio de Janeiro", quote: "Indispensável para casos complexos. A avaliação de ATM e vias aéreas num único protocolo é um diferencial enorme." },
-  { name: "Dr. Carlos Mendes", role: "Ortodontista, Belo Horizonte", quote: "Meus pacientes ficam impressionados com a clareza das imagens 3D na explicação do tratamento." },
+const metrics = [
+  { value: "6 análises", label: "em um único protocolo" },
+  { value: "5 dias úteis", label: "prazo de entrega" },
+  { value: "100% 3D", label: "sem sobreposições" },
 ];
 
 function Home() {
