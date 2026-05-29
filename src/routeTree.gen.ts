@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as ServicosRouteImport } from './routes/servicos'
 import { Route as QuemSomosRouteImport } from './routes/quem-somos'
 import { Route as FaqRouteImport } from './routes/faq'
+import { Route as ConteudosRouteImport } from './routes/conteudos'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as ComoSolicitarRouteImport } from './routes/como-solicitar'
 import { Route as ClinicasRouteImport } from './routes/clinicas'
@@ -30,6 +31,11 @@ const QuemSomosRoute = QuemSomosRouteImport.update({
 const FaqRoute = FaqRouteImport.update({
   id: '/faq',
   path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConteudosRoute = ConteudosRouteImport.update({
+  id: '/conteudos',
+  path: '/conteudos',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContatoRoute = ContatoRouteImport.update({
@@ -58,6 +64,7 @@ export interface FileRoutesByFullPath {
   '/clinicas': typeof ClinicasRoute
   '/como-solicitar': typeof ComoSolicitarRoute
   '/contato': typeof ContatoRoute
+  '/conteudos': typeof ConteudosRoute
   '/faq': typeof FaqRoute
   '/quem-somos': typeof QuemSomosRoute
   '/servicos': typeof ServicosRoute
@@ -67,6 +74,7 @@ export interface FileRoutesByTo {
   '/clinicas': typeof ClinicasRoute
   '/como-solicitar': typeof ComoSolicitarRoute
   '/contato': typeof ContatoRoute
+  '/conteudos': typeof ConteudosRoute
   '/faq': typeof FaqRoute
   '/quem-somos': typeof QuemSomosRoute
   '/servicos': typeof ServicosRoute
@@ -77,6 +85,7 @@ export interface FileRoutesById {
   '/clinicas': typeof ClinicasRoute
   '/como-solicitar': typeof ComoSolicitarRoute
   '/contato': typeof ContatoRoute
+  '/conteudos': typeof ConteudosRoute
   '/faq': typeof FaqRoute
   '/quem-somos': typeof QuemSomosRoute
   '/servicos': typeof ServicosRoute
@@ -88,6 +97,7 @@ export interface FileRouteTypes {
     | '/clinicas'
     | '/como-solicitar'
     | '/contato'
+    | '/conteudos'
     | '/faq'
     | '/quem-somos'
     | '/servicos'
@@ -97,6 +107,7 @@ export interface FileRouteTypes {
     | '/clinicas'
     | '/como-solicitar'
     | '/contato'
+    | '/conteudos'
     | '/faq'
     | '/quem-somos'
     | '/servicos'
@@ -106,6 +117,7 @@ export interface FileRouteTypes {
     | '/clinicas'
     | '/como-solicitar'
     | '/contato'
+    | '/conteudos'
     | '/faq'
     | '/quem-somos'
     | '/servicos'
@@ -116,6 +128,7 @@ export interface RootRouteChildren {
   ClinicasRoute: typeof ClinicasRoute
   ComoSolicitarRoute: typeof ComoSolicitarRoute
   ContatoRoute: typeof ContatoRoute
+  ConteudosRoute: typeof ConteudosRoute
   FaqRoute: typeof FaqRoute
   QuemSomosRoute: typeof QuemSomosRoute
   ServicosRoute: typeof ServicosRoute
@@ -142,6 +155,13 @@ declare module '@tanstack/react-router' {
       path: '/faq'
       fullPath: '/faq'
       preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/conteudos': {
+      id: '/conteudos'
+      path: '/conteudos'
+      fullPath: '/conteudos'
+      preLoaderRoute: typeof ConteudosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contato': {
@@ -180,6 +200,7 @@ const rootRouteChildren: RootRouteChildren = {
   ClinicasRoute: ClinicasRoute,
   ComoSolicitarRoute: ComoSolicitarRoute,
   ContatoRoute: ContatoRoute,
+  ConteudosRoute: ConteudosRoute,
   FaqRoute: FaqRoute,
   QuemSomosRoute: QuemSomosRoute,
   ServicosRoute: ServicosRoute,
