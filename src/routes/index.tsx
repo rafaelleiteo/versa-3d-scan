@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, Crosshair, Box, Activity, BookOpen, TrendingUp, MessageCircle as _MessageCircle, Clock } from "lucide-react";
-void _MessageCircle;
+import { ArrowRight, Crosshair, Box, Activity, BookOpen, TrendingUp, MessageCircle, Clock } from "lucide-react";
 import { WHATSAPP_PROTOCOL, LOGIN_URL } from "@/lib/links";
 
 export const Route = createFileRoute("/")({
