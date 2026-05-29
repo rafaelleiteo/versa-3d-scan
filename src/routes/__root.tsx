@@ -84,6 +84,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "VERSA3D — Diagnóstico Ortodôntico 3D" },
       { property: "og:description", content: "Cefalometria 3D baseada em tomografia de feixe cônico para ortodontistas." },
       { property: "og:type", content: "website" },
+      { name: "twitter:title", content: "VERSA3D — Diagnóstico Ortodôntico 3D" },
+      { name: "twitter:description", content: "Cefalometria 3D baseada em tomografia de feixe cônico para ortodontistas." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/b0cb1329-0835-4c52-82d2-f16171e5941e/id-preview-f47eedb1--a8c22693-394c-4dd1-a177-676140ff6bd2.lovable.app-1780098051083.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/b0cb1329-0835-4c52-82d2-f16171e5941e/id-preview-f47eedb1--a8c22693-394c-4dd1-a177-676140ff6bd2.lovable.app-1780098051083.png" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
