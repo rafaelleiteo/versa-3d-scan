@@ -160,7 +160,7 @@ function Home() {
 
       {/* Final CTA */}
       <section className="bg-dark text-dark-foreground">
-        <div className="mx-auto max-w-4xl px-6 py-20 text-center md:py-32">
+        <div className="mx-auto max-w-4xl px-6 py-20 text-center md:py-20">
           <h2 className="text-3xl font-bold tracking-tight md:text-5xl">
             Pronto para elevar seu diagnóstico?
           </h2>
