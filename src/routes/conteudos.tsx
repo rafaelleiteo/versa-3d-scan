@@ -17,7 +17,7 @@ export const Route = createFileRoute("/conteudos")({
 
 function Conteudos() {
   return (
-    <section className="mx-auto max-w-3xl px-6 py-28 text-center md:py-40">
+    <section className="mx-auto max-w-3xl px-6 py-16 text-center">
       <p className="text-sm font-medium uppercase tracking-widest text-primary">Conteúdos</p>
       <h1 className="mt-3 text-4xl font-bold tracking-tight md:text-6xl">
         Conteúdos em breve

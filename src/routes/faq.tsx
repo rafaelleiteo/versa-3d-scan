@@ -57,7 +57,7 @@ function Faq() {
   return (
     <>
       <section className="border-b border-border">
-        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
           <p className="text-sm font-medium uppercase tracking-widest text-primary">FAQ</p>
           <h1 className="mt-3 max-w-3xl text-4xl font-bold tracking-tight md:text-6xl">
             Perguntas frequentes.

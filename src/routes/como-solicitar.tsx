@@ -26,7 +26,7 @@ function ComoSolicitar() {
   return (
     <>
       <section className="border-b border-border">
-        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
           <p className="text-sm font-medium uppercase tracking-widest text-primary">Como solicitar</p>
           <h1 className="mt-3 max-w-3xl text-4xl font-bold tracking-tight md:text-6xl">
             Do cadastro ao laudo, em cinco etapas.
@@ -34,7 +34,7 @@ function ComoSolicitar() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-5xl px-6 py-14 md:py-16">
         <ol className="relative space-y-12 border-l border-border pl-10 md:space-y-16">
           {steps.map((s, i) => (
             <li key={s.title} className="relative">
