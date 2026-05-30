@@ -78,8 +78,11 @@ function Home() {
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-medium uppercase tracking-widest text-primary">Diferenciais</p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
-            Tecnologia que eleva o padrão diagnóstico
+            Por que o Protocolo VERSA3D?
           </h2>
+          <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
+            Análise tridimensional completa em um único protocolo, baseado em evidência científica.
+          </p>
         </div>
         <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
           {features.map((f) => (
