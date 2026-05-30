@@ -66,9 +66,13 @@ function Servicos() {
       <section className="mx-auto max-w-7xl px-6 py-14 md:py-20">
         <div className="grid gap-6 md:grid-cols-2">
           {services.map((s) => (
-            <article key={s.title} className="flex flex-col rounded-2xl border border-border bg-background p-10">
-              <h2 className="text-2xl font-bold tracking-tight">{s.title}</h2>
-              <p className="mt-2 text-sm text-muted-foreground">{s.tagline}</p>
+            <article key={s.title} className="flex flex-col overflow-hidden rounded-2xl border border-border bg-background">
+              <div className="aspect-video w-full overflow-hidden">
+                <img src={s.image} alt={s.title} className="h-full w-full object-cover" loading="lazy" />
+              </div>
+              <div className="flex flex-col p-10">
+                <h2 className="text-2xl font-bold tracking-tight">{s.title}</h2>
+                <p className="mt-2 text-sm text-muted-foreground">{s.tagline}</p>
 
               <div className="mt-8">
                 <h3 className="text-xs font-semibold uppercase tracking-widest text-foreground">Avalia</h3>
