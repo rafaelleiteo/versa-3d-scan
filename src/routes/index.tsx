@@ -43,7 +43,7 @@ function Home() {
       <section className="relative overflow-hidden bg-dark text-dark-foreground">
         <div className="absolute inset-0 dot-grid opacity-60" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-dark" />
-        <div className="relative mx-auto max-w-7xl px-6 py-28 md:py-40">
+        <div className="relative mx-auto max-w-7xl px-6 py-20 md:py-24">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-4xl font-bold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
               Diagnóstico Ortodôntico 3D com precisão real
