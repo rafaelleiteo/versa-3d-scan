@@ -53,7 +53,7 @@ function Servicos() {
   return (
     <>
       <section className="border-b border-border">
-        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-14 md:py-20">
           <p className="text-sm font-medium uppercase tracking-widest text-primary">Serviços</p>
           <h1 className="mt-3 max-w-3xl text-4xl font-bold tracking-tight md:text-6xl">
             Dois protocolos. Um padrão de precisão.
@@ -61,7 +61,7 @@ function Servicos() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-14 md:py-20">
         <div className="grid gap-6 md:grid-cols-2">
           {services.map((s) => (
             <article key={s.title} className="flex flex-col rounded-2xl border border-border bg-background p-10">
