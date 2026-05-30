@@ -18,6 +18,7 @@ const services = [
   {
     title: "Protocolo VERSA3D",
     tagline: "Análise cefalométrica 3D completa via TCFC",
+    image: "https://versa3d.com.br/assets/images/apresentao1.jpeg",
     evaluates: [
       "Assimetrias mandibulares",
       "Articulação temporomandibular (ATM)",
@@ -35,6 +36,7 @@ const services = [
   {
     title: "Cefalometria UNIFESP SONO",
     tagline: "Avaliação 3D de vias aéreas superiores",
+    image: "https://versa3d.com.br/assets/images/vias2-1.jpeg",
     evaluates: [
       "Volume da nasofaringe",
       "Volume da orofaringe",
