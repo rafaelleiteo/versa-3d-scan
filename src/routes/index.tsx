@@ -133,10 +133,16 @@ function Home() {
         <p className="text-center text-sm font-medium uppercase tracking-widest text-muted-foreground">
           Clínicas Credenciadas em todo o Brasil
         </p>
-        <div className="mt-10 grid grid-cols-2 items-center gap-8 opacity-60 md:grid-cols-6">
-          {Array.from({ length: 6 }).map((_, i) => (
-            <div key={i} className="flex h-12 items-center justify-center rounded-lg border border-border bg-secondary/40 text-xs font-semibold tracking-wider text-muted-foreground">
-              CLÍNICA {i + 1}
+        <div className="mt-10 grid grid-cols-2 items-center gap-x-8 gap-y-6 md:grid-cols-5">
+          {[
+            { name: "DATA X", src: "https://versa3d.com.br/assets/images/images-1.png" },
+            { name: "CERO", src: "https://versa3d.com.br/assets/images/logocero.png" },
+            { name: "CEDT", src: "https://versa3d.com.br/assets/images/cropped-cedt-rad-e-tomografia-odont-ltda-logo.png" },
+            { name: "RR Imagem", src: "https://versa3d.com.br/assets/images/images-3.png" },
+            { name: "Oral Rad", src: "https://versa3d.com.br/assets/images/images.jpg" },
+          ].map((c) => (
+            <div key={c.name} className="flex h-16 items-center justify-center rounded-lg border border-border bg-secondary/40 p-3">
+              <img src={c.src} alt={c.name} className="max-h-full max-w-full object-contain grayscale opacity-70 transition-opacity hover:opacity-100" loading="lazy" />
             </div>
           ))}
         </div>
