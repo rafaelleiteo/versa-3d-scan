@@ -43,7 +43,7 @@ function Home() {
       <section className="relative overflow-hidden bg-dark text-dark-foreground">
         <div className="absolute inset-0 dot-grid opacity-60" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-dark" />
-        <div className="relative mx-auto max-w-7xl px-6 py-20 md:py-24">
+        <div className="relative mx-auto max-w-7xl px-6 py-20 md:py-20">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-4xl font-bold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
               Diagnóstico Ortodôntico 3D com precisão real
@@ -74,7 +74,7 @@ function Home() {
       </section>
 
       {/* Features */}
-      <section className="mx-auto max-w-7xl px-6 py-24 md:py-32">
+      <section className="mx-auto max-w-7xl px-6 py-16 md:py-20">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-medium uppercase tracking-widest text-primary">Diferenciais</p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
@@ -97,7 +97,7 @@ function Home() {
 
       {/* How it works */}
       <section className="border-y border-border bg-secondary/40">
-        <div className="mx-auto max-w-7xl px-6 py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-6 py-16 md:py-20">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-medium uppercase tracking-widest text-primary">Como funciona</p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">Três etapas para o diagnóstico completo</h2>
@@ -137,7 +137,7 @@ function Home() {
       {/* Evidence-based */}
       <section className="relative overflow-hidden bg-dark text-dark-foreground">
         <div className="absolute inset-0 dot-grid opacity-40" />
-        <div className="relative mx-auto max-w-7xl px-6 py-24 md:py-32">
+        <div className="relative mx-auto max-w-7xl px-6 py-16 md:py-20">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-medium uppercase tracking-widest text-primary">Ciência</p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
@@ -160,7 +160,7 @@ function Home() {
 
       {/* Final CTA */}
       <section className="bg-dark text-dark-foreground">
-        <div className="mx-auto max-w-4xl px-6 py-24 text-center md:py-32">
+        <div className="mx-auto max-w-4xl px-6 py-20 text-center md:py-32">
           <h2 className="text-3xl font-bold tracking-tight md:text-5xl">
             Pronto para elevar seu diagnóstico?
           </h2>
