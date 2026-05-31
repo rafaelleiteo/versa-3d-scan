@@ -36,19 +36,28 @@ const metrics = [
   { value: "100% 3D", label: "sem sobreposições" },
 ];
 
+const CLINICS = [
+  { name: "Data X Radiologia", logo: "https://versa3d.com.br/assets/images/images-1.png" },
+  { name: "CERO Imagem Digital", logo: "https://versa3d.com.br/assets/images/logocero.png" },
+  { name: "CEDT Radiologia Odontológica", logo: "https://versa3d.com.br/assets/images/cropped-cedt-rad-e-tomografia-odont-ltda-logo.png" },
+  { name: "Facenter", logo: "https://versa3d.com.br/assets/images/share-img.jpeg" },
+  { name: "RR Imagem", logo: "https://versa3d.com.br/assets/images/images-3.png" },
+  { name: "CERDO", logo: "https://versa3d.com.br/assets/images/screenshot-6.jpg" },
+  { name: "Oral Rad", logo: "https://versa3d.com.br/assets/images/images.jpg" },
+];
+
 function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-dark text-dark-foreground">
-        <div className="absolute inset-0 dot-grid opacity-60" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-dark" />
+      <section className="relative overflow-hidden bg-background">
         <div className="relative mx-auto max-w-7xl px-6 py-14 md:py-16">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-bold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
+            <p className="text-sm font-medium uppercase tracking-widest text-primary">Diagnóstico 3D</p>
+            <h1 className="mt-4 text-4xl font-bold leading-[1.05] tracking-tight text-foreground md:text-6xl lg:text-7xl">
               Diagnóstico Ortodôntico 3D com precisão real
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-dark-foreground/70 md:text-xl">
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
               Cefalometria 3D baseada em tomografia de feixe cônico (TCFC) para ortodontistas que exigem mais do seu diagnóstico.
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
@@ -56,7 +65,7 @@ function Home() {
                 href={WHATSAPP_PROTOCOL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30"
+                className="inline-flex items-center gap-2 rounded-[20px] bg-foreground px-6 py-3 text-sm font-semibold text-background transition-all hover:opacity-90"
               >
                 Solicitar Protocolo <ArrowRight className="h-4 w-4" />
               </a>
@@ -64,7 +73,7 @@ function Home() {
                 href={LOGIN_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-dark-foreground transition-colors hover:bg-white/10"
+                className="inline-flex items-center rounded-[20px] border border-foreground bg-transparent px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/5"
               >
                 Fazer Login
               </a>
@@ -74,52 +83,54 @@ function Home() {
       </section>
 
       {/* Features */}
-      <section className="mx-auto max-w-7xl px-6 py-14 md:py-16">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-medium uppercase tracking-widest text-primary">Diferenciais</p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
-            Por que o Protocolo VERSA3D?
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-            Análise tridimensional completa em um único protocolo, baseado em evidência científica.
-          </p>
-        </div>
-        <figure className="mx-auto mt-12 max-w-[900px] px-2">
-          <div className="overflow-hidden rounded-xl border border-border bg-secondary/40">
-            <img
-              src="https://versa3d.com.br/assets/images/diagnostico-3d-dipo24-1.jpeg"
-              alt="Avaliação de assimetria mandibular — Protocolo VERSA3D"
-              className="h-full max-h-[480px] w-full object-cover"
-              loading="lazy"
-            />
+      <section className="bg-secondary">
+        <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-sm font-medium uppercase tracking-widest text-primary">Diferenciais</p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+              Por que o Protocolo VERSA3D?
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
+              Análise tridimensional completa em um único protocolo, baseado em evidência científica.
+            </p>
           </div>
-          <figcaption className="mt-3 text-center text-sm text-muted-foreground">
-            Avaliação de assimetria mandibular — Protocolo VERSA3D
-          </figcaption>
-        </figure>
-        <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
-          {features.map((f) => (
-            <div key={f.title} className="bg-background p-8 transition-colors hover:bg-secondary">
-              <f.icon className="h-6 w-6 text-primary" strokeWidth={1.5} />
-              <h3 className="mt-5 text-lg font-semibold">{f.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{f.body}</p>
+          <figure className="mx-auto mt-12 max-w-[900px] px-2">
+            <div className="overflow-hidden rounded-xl border border-border bg-background">
+              <img
+                src="https://versa3d.com.br/assets/images/diagnostico-3d-dipo24-1.jpeg"
+                alt="Avaliação de assimetria mandibular — Protocolo VERSA3D"
+                className="h-full max-h-[480px] w-full object-cover"
+                loading="lazy"
+              />
             </div>
-          ))}
+            <figcaption className="mt-3 text-center text-sm text-muted-foreground">
+              Avaliação de assimetria mandibular — Protocolo VERSA3D
+            </figcaption>
+          </figure>
+          <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {features.map((f) => (
+              <div key={f.title} className="rounded-2xl border border-border bg-background p-8 transition-colors hover:border-primary/40" style={{ borderWidth: "0.5px" }}>
+                <f.icon className="h-6 w-6 text-primary" strokeWidth={1.5} />
+                <h3 className="mt-5 text-lg font-semibold text-foreground">{f.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{f.body}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* How it works */}
-      <section className="border-y border-border bg-secondary/40">
+      <section className="bg-background">
         <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-medium uppercase tracking-widest text-primary">Como funciona</p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">Três etapas para o diagnóstico completo</h2>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-foreground md:text-4xl">Três etapas para o diagnóstico completo</h2>
           </div>
           <div className="mt-16 grid gap-8 md:grid-cols-3">
             {steps.map((s) => (
-              <div key={s.n} className="rounded-2xl border border-border bg-background p-8">
+              <div key={s.n} className="rounded-2xl border border-border bg-background p-8" style={{ borderWidth: "0.5px" }}>
                 <div className="text-5xl font-bold tracking-tighter text-primary">{s.n}</div>
-                <h3 className="mt-6 text-xl font-semibold">{s.title}</h3>
+                <h3 className="mt-6 text-xl font-semibold text-foreground">{s.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.body}</p>
               </div>
             ))}
@@ -134,43 +145,38 @@ function Home() {
       </section>
 
       {/* Partner clinics */}
-      <section className="mx-auto max-w-7xl px-6 py-14 md:py-16">
-        <p className="text-center text-sm font-medium uppercase tracking-widest text-muted-foreground">
-          Clínicas Credenciadas em todo o Brasil
-        </p>
-        <div className="mt-10 grid grid-cols-2 items-center gap-x-8 gap-y-6 md:grid-cols-5">
-          {[
-            { name: "DATA X", src: "https://versa3d.com.br/assets/images/images-1.png" },
-            { name: "CERO", src: "https://versa3d.com.br/assets/images/logocero.png" },
-            { name: "CEDT", src: "https://versa3d.com.br/assets/images/cropped-cedt-rad-e-tomografia-odont-ltda-logo.png" },
-            { name: "RR Imagem", src: "https://versa3d.com.br/assets/images/images-3.png" },
-            { name: "Oral Rad", src: "https://versa3d.com.br/assets/images/images.jpg" },
-          ].map((c) => (
-            <div key={c.name} className="flex h-16 items-center justify-center rounded-lg border border-border bg-secondary/40 p-3">
-              <img src={c.src} alt={c.name} className="max-h-full max-w-full object-contain grayscale opacity-70 transition-opacity hover:opacity-100" loading="lazy" />
-            </div>
-          ))}
+      <section className="bg-secondary" style={{ borderTop: "0.5px solid #E8DFC8", borderBottom: "0.5px solid #E8DFC8" }}>
+        <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
+          <p className="text-center text-sm font-medium uppercase tracking-widest text-muted-foreground">
+            Clínicas Credenciadas em todo o Brasil
+          </p>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+            {CLINICS.map((c) => (
+              <div key={c.name} className="flex h-16 min-w-[140px] items-center justify-center rounded-lg bg-background p-3" style={{ border: "0.5px solid #E8DFC8" }}>
+                <img src={c.logo} alt={c.name} className="max-h-12 max-w-full object-contain" loading="lazy" />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Evidence-based */}
       <section className="relative overflow-hidden bg-dark text-dark-foreground">
-        <div className="absolute inset-0 dot-grid opacity-40" />
         <div className="relative mx-auto max-w-7xl px-6 py-14 md:py-16">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-medium uppercase tracking-widest text-primary">Ciência</p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-dark-foreground md:text-4xl">
               Baseado em evidência científica
             </h2>
-            <p className="mt-6 text-base leading-relaxed text-dark-foreground/70 md:text-lg">
+            <p className="mt-6 text-base leading-relaxed text-[#6A6560] md:text-lg">
               Todas as análises do Protocolo VERSA são fundamentadas em literatura científica constantemente atualizada, garantindo diagnósticos com validade clínica comprovada.
             </p>
           </div>
           <div className="mt-16 grid gap-6 md:grid-cols-3">
             {metrics.map((m) => (
-              <div key={m.value} className="rounded-2xl border border-white/10 bg-white/5 p-8 text-center backdrop-blur-sm">
+              <div key={m.value} className="rounded-2xl bg-[#1C1814] p-8 text-center">
                 <div className="text-4xl font-bold tracking-tight text-primary md:text-5xl">{m.value}</div>
-                <div className="mt-3 text-sm text-dark-foreground/70">{m.label}</div>
+                <div className="mt-3 text-sm text-[#6A6560]">{m.label}</div>
               </div>
             ))}
           </div>
@@ -180,14 +186,14 @@ function Home() {
       {/* Final CTA */}
       <section className="bg-dark text-dark-foreground">
         <div className="mx-auto max-w-4xl px-6 py-14 md:py-16 text-center">
-          <h2 className="text-3xl font-bold tracking-tight md:text-5xl">
+          <h2 className="text-3xl font-bold tracking-tight text-dark-foreground md:text-5xl">
             Pronto para elevar seu diagnóstico?
           </h2>
           <a
             href={WHATSAPP_PROTOCOL}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-10 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30"
+            className="mt-10 inline-flex items-center gap-2 rounded-[20px] bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:bg-[#E8C96A]"
           >
             Solicitar Protocolo VERSA3D <ArrowRight className="h-4 w-4" />
           </a>
