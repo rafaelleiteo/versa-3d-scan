@@ -40,15 +40,14 @@ function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-dark text-dark-foreground">
-        <div className="absolute inset-0 dot-grid opacity-60" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-dark" />
+      <section className="relative overflow-hidden bg-background">
         <div className="relative mx-auto max-w-7xl px-6 py-14 md:py-16">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-bold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
+            <p className="text-sm font-medium uppercase tracking-widest text-primary">Diagnóstico 3D</p>
+            <h1 className="mt-4 text-4xl font-bold leading-[1.05] tracking-tight text-foreground md:text-6xl lg:text-7xl">
               Diagnóstico Ortodôntico 3D com precisão real
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-dark-foreground/70 md:text-xl">
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
               Cefalometria 3D baseada em tomografia de feixe cônico (TCFC) para ortodontistas que exigem mais do seu diagnóstico.
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
@@ -56,7 +55,7 @@ function Home() {
                 href={WHATSAPP_PROTOCOL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30"
+                className="inline-flex items-center gap-2 rounded-[20px] bg-foreground px-6 py-3 text-sm font-semibold text-background transition-all hover:opacity-90"
               >
                 Solicitar Protocolo <ArrowRight className="h-4 w-4" />
               </a>
@@ -64,7 +63,7 @@ function Home() {
                 href={LOGIN_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-dark-foreground transition-colors hover:bg-white/10"
+                className="inline-flex items-center rounded-[20px] border border-foreground bg-transparent px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/5"
               >
                 Fazer Login
               </a>
