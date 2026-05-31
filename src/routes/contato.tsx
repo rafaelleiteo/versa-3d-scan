@@ -36,7 +36,7 @@ function Contato() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20">
+      <section className="mx-auto max-w-7xl px-6 py-14 md:py-16">
         <div className="grid gap-4 md:grid-cols-3">
           {channels.map((c) => (
             <a

@@ -65,7 +65,7 @@ function Faq() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 py-20">
+      <section className="mx-auto max-w-3xl px-6 py-14 md:py-16">
         <div className="divide-y divide-border border-y border-border">
           {QA.map((item, i) => {
             const isOpen = open === i;

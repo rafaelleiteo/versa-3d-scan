@@ -18,7 +18,7 @@ function QuemSomos() {
   return (
     <>
       <section className="border-b border-border">
-        <div className="mx-auto max-w-7xl px-6 py-14 md:py-20">
+        <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
           <p className="text-sm font-medium uppercase tracking-widest text-primary">Quem Somos</p>
           <h1 className="mt-3 max-w-3xl text-4xl font-bold tracking-tight md:text-6xl">
             Quem está por trás da VERSA3D
@@ -30,7 +30,7 @@ function QuemSomos() {
       </section>
 
       {/* Founder */}
-      <section className="mx-auto max-w-5xl px-6 py-20">
+      <section className="mx-auto max-w-5xl px-6 py-14 md:py-16">
         <div className="overflow-hidden rounded-3xl border border-border bg-secondary/30">
           <div className="grid gap-10 p-8 md:grid-cols-[auto_1fr] md:gap-12 md:p-12">
             <div className="flex justify-center md:block">
@@ -62,7 +62,7 @@ function QuemSomos() {
 
       {/* Mission / Vision / Values */}
       <section className="border-y border-border bg-secondary/40">
-        <div className="mx-auto max-w-7xl px-6 py-20">
+        <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
           <div className="grid gap-6 md:grid-cols-3">
             {[
               { icon: Target, title: "Missão", body: "Proporcionar diagnósticos ortodônticos mais precisos, previsíveis e acessíveis utilizando tecnologia 3D." },
@@ -82,7 +82,7 @@ function QuemSomos() {
       {/* Tese */}
       <section className="relative overflow-hidden bg-dark text-dark-foreground">
         <div className="absolute inset-0 dot-grid opacity-40" />
-        <div className="relative mx-auto max-w-4xl px-6 py-20 text-center md:py-20">
+        <div className="relative mx-auto max-w-4xl px-6 py-14 md:py-16 text-center md:py-20">
           <p className="text-sm font-medium uppercase tracking-widest text-primary">A Tese</p>
           <blockquote className="mt-6 text-2xl font-medium leading-snug tracking-tight md:text-4xl">
             "O diagnóstico determina diretamente o sucesso do tratamento. Tornar o complexo simples e diretamente aplicável à prática clínica — essa é a grande missão da VERSA3D."
