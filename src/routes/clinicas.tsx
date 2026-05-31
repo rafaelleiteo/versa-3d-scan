@@ -78,7 +78,7 @@ function Clinicas() {
       </section>
 
       <section className="border-t border-border bg-dark text-dark-foreground">
-        <div className="mx-auto max-w-4xl px-6 py-20 text-center">
+        <div className="mx-auto max-w-4xl px-6 py-14 md:py-16 text-center">
           <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Quero credenciar minha clínica</h2>
           <p className="mt-4 text-dark-foreground/70">Junte-se à rede VERSA3D e ofereça diagnóstico ortodôntico 3D aos seus clientes.</p>
           <a

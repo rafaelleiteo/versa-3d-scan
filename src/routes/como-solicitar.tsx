@@ -49,7 +49,7 @@ function ComoSolicitar() {
       </section>
 
       <section className="border-t border-border bg-secondary/40">
-        <div className="mx-auto max-w-5xl px-6 py-20">
+        <div className="mx-auto max-w-5xl px-6 py-14 md:py-16">
           <h2 className="text-2xl font-bold tracking-tight md:text-3xl">Materiais de apoio</h2>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#" className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-3 text-sm font-medium transition-colors hover:bg-accent">
