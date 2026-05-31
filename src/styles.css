@@ -31,23 +31,23 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.21 0.04 265);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.21 0.04 265);
-  --primary: oklch(0.55 0.22 263);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.97 0.005 250);
-  --secondary-foreground: oklch(0.21 0.04 265);
-  --muted: oklch(0.97 0.005 250);
-  --muted-foreground: oklch(0.5 0.02 260);
-  --accent: oklch(0.97 0.005 250);
-  --accent-foreground: oklch(0.21 0.04 265);
-  --border: oklch(0.92 0.01 255);
-  --input: oklch(0.92 0.01 255);
-  --ring: oklch(0.55 0.22 263);
-  --dark: oklch(0.21 0.04 265);
-  --dark-foreground: oklch(0.98 0.003 248);
+  --background: #FFFFFF;
+  --foreground: #12100D;
+  --card: #FFFFFF;
+  --card-foreground: #12100D;
+  --primary: #C9A84C;
+  --primary-foreground: #12100D;
+  --secondary: #FAFAF8;
+  --secondary-foreground: #12100D;
+  --muted: #FAFAF8;
+  --muted-foreground: #6A6560;
+  --accent: #FAFAF8;
+  --accent-foreground: #12100D;
+  --border: #E8DFC8;
+  --input: #E8DFC8;
+  --ring: #C9A84C;
+  --dark: #12100D;
+  --dark-foreground: #FFFFFF;
 }
 
 @layer base {
