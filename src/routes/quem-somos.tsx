@@ -82,7 +82,7 @@ function QuemSomos() {
       {/* Tese */}
       <section className="relative overflow-hidden bg-dark text-dark-foreground">
         <div className="absolute inset-0 dot-grid opacity-40" />
-        <div className="relative mx-auto max-w-4xl px-6 py-14 md:py-16 text-center md:py-20">
+        <div className="relative mx-auto max-w-4xl px-6 py-14 md:py-16 text-center">
           <p className="text-sm font-medium uppercase tracking-widest text-primary">A Tese</p>
           <blockquote className="mt-6 text-2xl font-medium leading-snug tracking-tight md:text-4xl">
             "O diagnóstico determina diretamente o sucesso do tratamento. Tornar o complexo simples e diretamente aplicável à prática clínica — essa é a grande missão da VERSA3D."
