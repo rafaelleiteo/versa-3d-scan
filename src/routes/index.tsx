@@ -84,14 +84,19 @@ function Home() {
             Análise tridimensional completa em um único protocolo, baseado em evidência científica.
           </p>
         </div>
-        <div className="mt-12 overflow-hidden rounded-2xl border border-border">
-          <img
-            src="https://versa3d.com.br/assets/images/diagnostico-3d-dipo24-1.jpeg"
-            alt="Diagnóstico 3D ortodôntico VERSA3D"
-            className="h-auto w-full object-cover"
-            loading="lazy"
-          />
-        </div>
+        <figure className="mx-auto mt-12 max-w-[900px] px-2">
+          <div className="overflow-hidden rounded-xl border border-border bg-secondary/40">
+            <img
+              src="https://versa3d.com.br/assets/images/diagnostico-3d-dipo24-1.jpeg"
+              alt="Avaliação de assimetria mandibular — Protocolo VERSA3D"
+              className="h-full max-h-[480px] w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <figcaption className="mt-3 text-center text-sm text-muted-foreground">
+            Avaliação de assimetria mandibular — Protocolo VERSA3D
+          </figcaption>
+        </figure>
         <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
           {features.map((f) => (
             <div key={f.title} className="bg-background p-8 transition-colors hover:bg-secondary">
