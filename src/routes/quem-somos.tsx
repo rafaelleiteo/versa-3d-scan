@@ -19,7 +19,7 @@ function QuemSomos() {
     <>
       <section className="border-b border-border">
         <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
-          <p className="text-sm font-medium uppercase tracking-widest text-primary">Quem Somos</p>
+          <p className="text-sm font-medium uppercase tracking-widest text-gold-dark">Quem Somos</p>
           <h1 className="mt-3 max-w-3xl text-4xl font-bold tracking-tight md:text-6xl">
             Quem está por trás da VERSA3D
           </h1>
@@ -39,7 +39,7 @@ function QuemSomos() {
               </div>
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-primary">Fundador da VERSA3D</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-gold-dark">Fundador da VERSA3D</p>
               <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">Rafael Leite Oliveira</h2>
               <p className="mt-4 text-sm font-medium text-foreground">
                 Ortodontista · Professor universitário · Mestre em Ortodontia · Doutorando
@@ -83,7 +83,7 @@ function QuemSomos() {
       <section className="relative overflow-hidden bg-dark text-dark-foreground">
         <div className="absolute inset-0 dot-grid opacity-40" />
         <div className="relative mx-auto max-w-4xl px-6 py-14 md:py-16 text-center">
-          <p className="text-sm font-medium uppercase tracking-widest text-primary">A Tese</p>
+          <p className="text-sm font-medium uppercase tracking-widest text-gold-dark">A Tese</p>
           <blockquote className="mt-6 text-2xl font-medium leading-snug tracking-tight md:text-4xl">
             "O diagnóstico determina diretamente o sucesso do tratamento. Tornar o complexo simples e diretamente aplicável à prática clínica — essa é a grande missão da VERSA3D."
           </blockquote>

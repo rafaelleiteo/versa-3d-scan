@@ -30,7 +30,7 @@ function Clinicas() {
     <>
       <section className="border-b border-border bg-background">
         <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
-          <p className="text-sm font-medium uppercase tracking-widest text-primary">Rede credenciada</p>
+          <p className="text-sm font-medium uppercase tracking-widest text-gold-dark">Rede credenciada</p>
           <h1 className="mt-3 max-w-3xl text-4xl font-bold tracking-tight text-foreground md:text-6xl">
             Clínicas radiológicas em todo o Brasil.
           </h1>
