@@ -79,7 +79,7 @@ function Servicos() {
                 <ul className="mt-3 space-y-2">
                   {s.evaluates.map((e) => (
                     <li key={e} className="flex items-start gap-2 text-sm">
-                      <Check className="mt-0.5 h-4 w-4 flex-none text-primary" />
+                      <Check className="mt-0.5 h-4 w-4 flex-none text-gold-dark" />
                       <span>{e}</span>
                     </li>
                   ))}
@@ -91,7 +91,7 @@ function Servicos() {
                 <ul className="mt-3 space-y-2">
                   {s.ideal.map((e) => (
                     <li key={e} className="flex items-start gap-2 text-sm">
-                      <Check className="mt-0.5 h-4 w-4 flex-none text-primary" />
+                      <Check className="mt-0.5 h-4 w-4 flex-none text-gold-dark" />
                       <span>{e}</span>
                     </li>
                   ))}

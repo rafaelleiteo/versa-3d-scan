@@ -76,7 +76,7 @@ function Faq() {
                   className="flex w-full items-center justify-between gap-6 py-6 text-left"
                 >
                   <span className="text-base font-semibold md:text-lg">{item.q}</span>
-                  {isOpen ? <Minus className="h-5 w-5 flex-none text-primary" /> : <Plus className="h-5 w-5 flex-none text-muted-foreground" />}
+                  {isOpen ? <Minus className="h-5 w-5 flex-none text-gold-dark" /> : <Plus className="h-5 w-5 flex-none text-muted-foreground" />}
                 </button>
                 {isOpen && (
                   <p className="pb-6 pr-10 text-sm leading-relaxed text-muted-foreground md:text-base">{item.a}</p>
@@ -92,7 +92,7 @@ function Faq() {
             href={WHATSAPP_FAQ}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30"
+            className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-gold-dark-foreground transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30"
           >
             <MessageCircle className="h-4 w-4" /> Falar pelo WhatsApp
           </a>

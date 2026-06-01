@@ -34,7 +34,7 @@ function QuemSomos() {
         <div className="overflow-hidden rounded-3xl border border-border bg-secondary/30">
           <div className="grid gap-10 p-8 md:grid-cols-[auto_1fr] md:gap-12 md:p-12">
             <div className="flex justify-center md:block">
-              <div className="flex h-44 w-44 items-center justify-center rounded-full bg-gradient-to-br from-primary/20 to-primary/5 text-5xl font-bold text-primary ring-4 ring-background md:h-56 md:w-56 md:text-6xl">
+              <div className="flex h-44 w-44 items-center justify-center rounded-full bg-gradient-to-br from-gold-dark/20 to-gold-dark/5 text-5xl font-bold text-gold-dark ring-4 ring-background md:h-56 md:w-56 md:text-6xl">
                 RL
               </div>
             </div>
@@ -51,7 +51,7 @@ function QuemSomos() {
                 href="https://instagram.com/versa_3d"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+                className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-gold-dark hover:underline"
               >
                 <Instagram className="h-4 w-4" /> @versa_3d
               </a>
@@ -70,7 +70,7 @@ function QuemSomos() {
               { icon: Shield, title: "Valores", body: "Precisão diagnóstica · Excelência técnica · Ciência · Inovação · Ética · Padronização." },
             ].map((c) => (
               <div key={c.title} className="rounded-2xl border border-border bg-background p-8">
-                <c.icon className="h-6 w-6 text-primary" strokeWidth={1.5} />
+                <c.icon className="h-6 w-6 text-gold-dark" strokeWidth={1.5} />
                 <h3 className="mt-5 text-xl font-semibold">{c.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{c.body}</p>
               </div>

@@ -38,7 +38,7 @@ function ComoSolicitar() {
         <ol className="relative space-y-12 border-l border-border pl-10 md:space-y-16">
           {steps.map((s, i) => (
             <li key={s.title} className="relative">
-              <div className="absolute -left-[3.25rem] flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background text-sm font-bold text-primary">
+              <div className="absolute -left-[3.25rem] flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background text-sm font-bold text-gold-dark">
                 {i + 1}
               </div>
               <h3 className="text-xl font-semibold tracking-tight">{s.title}</h3>
@@ -65,7 +65,7 @@ function ComoSolicitar() {
             <p className="mt-2 text-sm text-muted-foreground">Veja a lista de clínicas credenciadas em todo o Brasil.</p>
             <Link
               to="/clinicas"
-              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
+              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-gold-dark hover:underline"
             >
               Ver clínicas credenciadas <ArrowRight className="h-4 w-4" />
             </Link>
