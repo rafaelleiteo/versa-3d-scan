@@ -26,6 +26,7 @@
   --color-ring: var(--ring);
   --color-dark: var(--dark);
   --color-dark-foreground: var(--dark-foreground);
+  --color-gold-dark: var(--gold-dark);
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
