@@ -65,7 +65,7 @@ function Home() {
                 href={WHATSAPP_PROTOCOL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-[20px] bg-foreground px-6 py-3 text-sm font-semibold text-background transition-all hover:opacity-90"
+                className="inline-flex items-center gap-2 rounded-[20px] bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:bg-[#E8C96A]"
               >
                 Solicitar Protocolo <ArrowRight className="h-4 w-4" />
               </a>
@@ -73,7 +73,7 @@ function Home() {
                 href={LOGIN_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center rounded-[20px] border border-foreground bg-transparent px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/5"
+                className="inline-flex items-center rounded-[20px] border border-gold-dark bg-transparent px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/5"
               >
                 Fazer Login
               </a>
