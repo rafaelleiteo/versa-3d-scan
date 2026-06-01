@@ -50,10 +50,10 @@ function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-background">
+      <section className="relative overflow-hidden bg-secondary">
         <div className="relative mx-auto max-w-7xl px-6 py-14 md:py-16">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-sm font-medium uppercase tracking-widest text-primary">Diagnóstico 3D</p>
+            <p className="text-sm font-medium uppercase tracking-widest text-gold-dark">Diagnóstico 3D</p>
             <h1 className="mt-4 text-4xl font-bold leading-[1.05] tracking-tight text-foreground md:text-6xl lg:text-7xl">
               Diagnóstico Ortodôntico 3D com precisão real
             </h1>
