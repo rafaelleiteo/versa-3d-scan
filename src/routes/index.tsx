@@ -86,7 +86,7 @@ function Home() {
       <section className="bg-secondary">
         <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-medium uppercase tracking-widest text-primary">Diferenciais</p>
+            <p className="text-sm font-medium uppercase tracking-widest text-gold-dark">Diferenciais</p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
               Por que o Protocolo VERSA3D?
             </h2>
@@ -109,8 +109,8 @@ function Home() {
           </figure>
           <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {features.map((f) => (
-              <div key={f.title} className="rounded-2xl border border-border bg-background p-8 transition-colors hover:border-primary/40" style={{ borderWidth: "0.5px" }}>
-                <f.icon className="h-6 w-6 text-primary" strokeWidth={1.5} />
+              <div key={f.title} className="rounded-2xl border border-border bg-background p-8 transition-colors hover:border-gold-dark/40" style={{ borderWidth: "0.5px" }}>
+                <f.icon className="h-6 w-6 text-gold-dark" strokeWidth={1.5} />
                 <h3 className="mt-5 text-lg font-semibold text-foreground">{f.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{f.body}</p>
               </div>
@@ -123,13 +123,13 @@ function Home() {
       <section className="bg-background">
         <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-medium uppercase tracking-widest text-primary">Como funciona</p>
+            <p className="text-sm font-medium uppercase tracking-widest text-gold-dark">Como funciona</p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-foreground md:text-4xl">Três etapas para o diagnóstico completo</h2>
           </div>
           <div className="mt-16 grid gap-8 md:grid-cols-3">
             {steps.map((s) => (
               <div key={s.n} className="rounded-2xl border border-border bg-background p-8" style={{ borderWidth: "0.5px" }}>
-                <div className="text-5xl font-bold tracking-tighter text-primary">{s.n}</div>
+                <div className="text-5xl font-bold tracking-tighter text-gold-dark">{s.n}</div>
                 <h3 className="mt-6 text-xl font-semibold text-foreground">{s.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.body}</p>
               </div>
@@ -137,7 +137,7 @@ function Home() {
           </div>
           <div className="mt-12 flex justify-center">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm">
-              <Clock className="h-4 w-4 text-primary" />
+              <Clock className="h-4 w-4 text-gold-dark" />
               Entrega em até 5 dias úteis após validação dos arquivos DICOM
             </div>
           </div>
