@@ -29,7 +29,7 @@ function Contato() {
     <>
       <section className="border-b border-border">
         <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
-          <p className="text-sm font-medium uppercase tracking-widest text-primary">Contato</p>
+          <p className="text-sm font-medium uppercase tracking-widest text-gold-dark">Contato</p>
           <h1 className="mt-3 max-w-3xl text-4xl font-bold tracking-tight md:text-6xl">
             Vamos conversar.
           </h1>
@@ -46,9 +46,9 @@ function Contato() {
               rel="noopener noreferrer"
               className="group rounded-2xl border border-border bg-background p-8 transition-colors hover:border-foreground/30"
             >
-              <c.icon className="h-6 w-6 text-primary" strokeWidth={1.5} />
+              <c.icon className="h-6 w-6 text-gold-dark" strokeWidth={1.5} />
               <div className="mt-6 text-xs font-semibold uppercase tracking-widest text-muted-foreground">{c.label}</div>
-              <div className="mt-1 text-base font-semibold group-hover:text-primary">{c.value}</div>
+              <div className="mt-1 text-base font-semibold group-hover:text-gold-dark">{c.value}</div>
             </a>
           ))}
         </div>
@@ -91,7 +91,7 @@ function Contato() {
             <div className="flex items-center gap-4">
               <button
                 type="submit"
-                className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30"
+                className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-gold-dark-foreground transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30"
               >
                 Enviar
               </button>

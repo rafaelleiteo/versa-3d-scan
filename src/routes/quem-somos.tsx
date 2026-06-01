@@ -19,7 +19,7 @@ function QuemSomos() {
     <>
       <section className="border-b border-border">
         <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
-          <p className="text-sm font-medium uppercase tracking-widest text-primary">Quem Somos</p>
+          <p className="text-sm font-medium uppercase tracking-widest text-gold-dark">Quem Somos</p>
           <h1 className="mt-3 max-w-3xl text-4xl font-bold tracking-tight md:text-6xl">
             Quem está por trás da VERSA3D
           </h1>
@@ -34,12 +34,12 @@ function QuemSomos() {
         <div className="overflow-hidden rounded-3xl border border-border bg-secondary/30">
           <div className="grid gap-10 p-8 md:grid-cols-[auto_1fr] md:gap-12 md:p-12">
             <div className="flex justify-center md:block">
-              <div className="flex h-44 w-44 items-center justify-center rounded-full bg-gradient-to-br from-primary/20 to-primary/5 text-5xl font-bold text-primary ring-4 ring-background md:h-56 md:w-56 md:text-6xl">
+              <div className="flex h-44 w-44 items-center justify-center rounded-full bg-gradient-to-br from-gold-dark/20 to-gold-dark/5 text-5xl font-bold text-gold-dark ring-4 ring-background md:h-56 md:w-56 md:text-6xl">
                 RL
               </div>
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-primary">Fundador da VERSA3D</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-gold-dark">Fundador da VERSA3D</p>
               <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">Rafael Leite Oliveira</h2>
               <p className="mt-4 text-sm font-medium text-foreground">
                 Ortodontista · Professor universitário · Mestre em Ortodontia · Doutorando
@@ -51,7 +51,7 @@ function QuemSomos() {
                 href="https://instagram.com/versa_3d"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+                className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-gold-dark hover:underline"
               >
                 <Instagram className="h-4 w-4" /> @versa_3d
               </a>
@@ -70,7 +70,7 @@ function QuemSomos() {
               { icon: Shield, title: "Valores", body: "Precisão diagnóstica · Excelência técnica · Ciência · Inovação · Ética · Padronização." },
             ].map((c) => (
               <div key={c.title} className="rounded-2xl border border-border bg-background p-8">
-                <c.icon className="h-6 w-6 text-primary" strokeWidth={1.5} />
+                <c.icon className="h-6 w-6 text-gold-dark" strokeWidth={1.5} />
                 <h3 className="mt-5 text-xl font-semibold">{c.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{c.body}</p>
               </div>
@@ -83,7 +83,7 @@ function QuemSomos() {
       <section className="relative overflow-hidden bg-dark text-dark-foreground">
         <div className="absolute inset-0 dot-grid opacity-40" />
         <div className="relative mx-auto max-w-4xl px-6 py-14 md:py-16 text-center">
-          <p className="text-sm font-medium uppercase tracking-widest text-primary">A Tese</p>
+          <p className="text-sm font-medium uppercase tracking-widest text-gold-dark">A Tese</p>
           <blockquote className="mt-6 text-2xl font-medium leading-snug tracking-tight md:text-4xl">
             "O diagnóstico determina diretamente o sucesso do tratamento. Tornar o complexo simples e diretamente aplicável à prática clínica — essa é a grande missão da VERSA3D."
           </blockquote>
