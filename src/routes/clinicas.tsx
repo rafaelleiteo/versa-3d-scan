@@ -36,6 +36,12 @@ const LOGOS = {
   oralrad: "https://versa3d.com.br/assets/images/images.jpg",
   cerdo: "https://versa3d.com.br/assets/images/screenshot-6.jpg",
   rr: "https://versa3d.com.br/assets/images/images-3.png",
+  inova: "https://static.wixstatic.com/media/16936e_7e382a1d74c645bfbb13abbc1fc2a0a1~mv2.png/v1/fill/w_358,h_86,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/LOGO%20ALTERNATIVO%20SEM%20FUNDO.png",
+  rorrj: "https://static.wixstatic.com/media/046bbe_41f4a7f148d944b59466f5987fb1ba04~mv2.png/v1/crop/x_0,y_0,w_209,h_63/fill/w_206,h_62,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo-rorrj-header-fundobranco.png",
+  ima: "https://imaradiologia.com.br/wp-content/uploads/2020/05/logo-ima-small-blue.png",
+  odontox: "https://www.odontox.com.br/wp-content/uploads/2025/07/lg1_30a.png",
+  odontoimagem45: "https://www.odontoimagem45.com.br/wp-content/uploads/2023/10/OF-ODONTO-IMAGEM-STORY-35.png",
+  odontoxba: "https://odontoxpauloafonso.radiomemory.com.br/efs3/odontoxpauloafonso.radiomemory.com.br/arquivos_imagens/logo/827f3bd244080ccf20caaecf183f7823.jpeg",
 };
 
 const GROUPS: CityGroup[] = [
@@ -75,9 +81,22 @@ const GROUPS: CityGroup[] = [
       },
       {
         name: "RORRJ — Radiologia Odontológica",
+        logo: LOGOS.rorrj,
         website: "www.rorrj.com.br",
         phones: ["(21) 2204-2194", "(21) 2567-8060", "(21) 99855-2909 (WhatsApp)"],
         address: "Rua Almirante Cochrane, nº 35 — Tijuca, Rio de Janeiro/RJ — CEP: 20550-040",
+      },
+      {
+        name: "Odonto-X Clínica Radiológica",
+        logo: LOGOS.odontox,
+        phones: ["(21) 98490-3025"],
+        address: "Av. das Américas, 500, Bl 16, Sala 211 (Downtown) — Barra da Tijuca, Rio de Janeiro/RJ",
+      },
+      {
+        name: "Odonto Imagem 45",
+        logo: LOGOS.odontoimagem45,
+        phones: ["(21) 98776-0052"],
+        address: "Praça Saenz Peña, 45, Sala 1412 — Tijuca, Rio de Janeiro/RJ",
       },
     ],
   },
@@ -130,6 +149,7 @@ const GROUPS: CityGroup[] = [
       },
       {
         name: "INOVA — Radiologia Odontológica",
+        logo: LOGOS.inova,
         website: "www.radiologiainova.com.br",
         address: "Rua Noronha Torrezão, 24, sala 903 — Santa Rosa, Niterói/RJ",
         phones: ["(21) 3587-0594", "(21) 99499-8069"],
@@ -148,6 +168,7 @@ const GROUPS: CityGroup[] = [
       },
       {
         name: "IMA Radiologia",
+        logo: LOGOS.ima,
         website: "www.imaradiologia.com.br",
         address: "Shopping Bauhaus Expansão — Rua Dr. Nelson de Sá Earp, 95, sala 320 — Centro, Petrópolis/RJ",
         phones: ["(24) 98831-3307", "(24) 2231-3307"],
@@ -159,6 +180,17 @@ const GROUPS: CityGroup[] = [
         units: [
           { name: "Unidade Itaipava", address: "Estrada União e Indústria, 11775, sobreloja 6 — Itaipava, Petrópolis/RJ", phones: ["(24) 98145-8215", "(24) 2222-7143"] },
         ],
+      },
+    ],
+  },
+  {
+    city: "Paulo Afonso — BA",
+    clinics: [
+      {
+        name: "Odonto X — Centro de Diagnóstico por Imagem",
+        logo: LOGOS.odontoxba,
+        phones: ["(75) 3281-7271"],
+        address: "Rua Santos Dumont, 10, Térreo — Centro, Paulo Afonso/BA",
       },
     ],
   },
