@@ -29,7 +29,7 @@ function Contato() {
     <>
       <section className="border-b border-border">
         <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
-          <p className="text-sm font-medium uppercase tracking-widest text-gold-dark">Contato</p>
+          <p className="text-[13px] font-semibold uppercase tracking-[0.08em] text-gold-dark">Contato</p>
           <h1 className="mt-3 max-w-3xl text-4xl font-bold tracking-tight md:text-6xl">
             Vamos conversar.
           </h1>

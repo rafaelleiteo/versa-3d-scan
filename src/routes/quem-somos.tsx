@@ -1,100 +1,157 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { Instagram, Target, Eye, Shield } from "lucide-react";
+import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/quem-somos")({
   head: () => ({
     meta: [
       { title: "Quem Somos — VERSA3D" },
-      { name: "description", content: "Conheça o fundador e a missão da VERSA3D, referência em diagnóstico ortodôntico 3D." },
+      { name: "description", content: "Conheça a equipe da VERSA3D: clínica, ciência, tecnologia e gestão para transformar o diagnóstico ortodôntico." },
       { property: "og:title", content: "Quem Somos — VERSA3D" },
-      { property: "og:description", content: "Uma empresa fundada por quem vive a ortodontia na prática clínica e científica." },
+      { property: "og:description", content: "As pessoas por trás da VERSA3D." },
     ],
     links: [{ rel: "canonical", href: "/quem-somos" }],
   }),
   component: QuemSomos,
 });
 
+type Member = {
+  initials: string;
+  name: string;
+  role: string;
+  bio: string;
+  link?: { label: string; href: string };
+};
+
+const TEAM: Member[] = [
+  {
+    initials: "IG",
+    name: "Isabelle Guimarães",
+    role: "Diretora Administrativa",
+    bio: "Na VERSA3D, responde pela gestão administrativa e operacional, garantindo que a estrutura interna suporte o crescimento com consistência. Ortodontista especialista, com atuação também na área de perícia judicial odontológica.",
+  },
+  {
+    initials: "SF",
+    name: "Sabrina Freitas",
+    role: "Secretária Executiva · Atendimento & Relacionamento",
+    bio: "Responsável pelo atendimento inicial, organização operacional e relacionamento com ortodontistas e clínicas radiológicas. Garante comunicação clara, agilidade e padronização no atendimento.",
+  },
+  {
+    initials: "PH",
+    name: "Pedro Henrique Siqueira",
+    role: "Desenvolvimento Técnico & Produto",
+    bio: "Atua no desenvolvimento técnico e na evolução dos protocolos e processos digitais da VERSA3D. Responsável pela organização de fluxos operacionais, suporte tecnológico interno e integração entre diagnóstico, tecnologia e escalabilidade dos serviços.",
+  },
+  {
+    initials: "DC",
+    name: "Daniel Campolina",
+    role: "Consultor Científico",
+    bio: "Atua como referência científica da VERSA3D, contribuindo para a atualização constante dos protocolos de análise com base em evidências clínicas e acadêmicas. Especialista em Ortodontia, Periodontia e Implantodontia, com Mestrado em Ortodontia.",
+  },
+  {
+    initials: "HM",
+    name: "Humberto Moraes",
+    role: "Consultor de IA & Estratégia Digital",
+    bio: "Na VERSA3D, lidera a estruturação de processos, automação com inteligência artificial e estratégia digital. Pós-graduado em IA e Negócios pela PUC-Campinas e Meta Verified Technology Partner, com atuação de mais de 25 anos em multinacionais como Subsea 7, Deloitte, ThyssenKrupp e Bosch.",
+    link: { label: "galileohub.com.br", href: "https://galileohub.com.br" },
+  },
+  {
+    initials: "TM",
+    name: "Thyago Menezes",
+    role: "Desenvolvimento Web & Sistemas",
+    bio: "Responsável pelo desenvolvimento, manutenção e evolução da plataforma digital da VERSA3D. Atua na estruturação de sistemas internos, integrações tecnológicas e implementação de soluções voltadas à eficiência, estabilidade e escalabilidade dos serviços digitais.",
+  },
+];
+
 function QuemSomos() {
   return (
     <>
-      <section className="border-b border-border">
+      {/* Header */}
+      <section className="border-b border-border bg-background">
         <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
-          <p className="text-sm font-medium uppercase tracking-widest text-gold-dark">Quem Somos</p>
-          <h1 className="mt-3 max-w-3xl text-4xl font-bold tracking-tight md:text-6xl">
-            Quem está por trás da VERSA3D
+          <p className="text-[13px] font-semibold uppercase tracking-[0.08em] text-gold-dark">Quem Somos</p>
+          <h1 className="mt-3 max-w-3xl text-4xl font-bold tracking-tight text-foreground md:text-6xl">
+            As pessoas por trás da VERSA3D
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
-            Uma empresa fundada por quem vive a ortodontia na prática clínica e científica.
+            Uma equipe que combina clínica, ciência, tecnologia e gestão para transformar o diagnóstico ortodôntico.
           </p>
         </div>
       </section>
 
       {/* Founder */}
-      <section className="mx-auto max-w-5xl px-6 py-14 md:py-16">
-        <div className="overflow-hidden rounded-3xl border border-border bg-secondary/30">
-          <div className="grid gap-10 p-8 md:grid-cols-[auto_1fr] md:gap-12 md:p-12">
-            <div className="flex justify-center md:block">
-              <div className="flex h-44 w-44 items-center justify-center rounded-full bg-gradient-to-br from-gold-dark/20 to-gold-dark/5 text-5xl font-bold text-gold-dark ring-4 ring-background md:h-56 md:w-56 md:text-6xl">
-                RL
-              </div>
+      <section className="bg-dark text-dark-foreground">
+        <div className="mx-auto max-w-5xl px-6 py-14 md:py-16">
+          <div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-8">
+            <div
+              className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full"
+              style={{ border: "1.5px solid #C9A84C", background: "rgba(201,168,76,0.1)" }}
+            >
+              <span style={{ color: "#C9A84C", fontSize: 20, fontWeight: 500 }}>RL</span>
             </div>
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-gold-dark">Fundador da VERSA3D</p>
-              <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">Rafael Leite Oliveira</h2>
-              <p className="mt-4 text-sm font-medium text-foreground">
-                Ortodontista · Professor universitário · Mestre em Ortodontia · Doutorando
+            <div className="flex-1">
+              <h2 style={{ fontSize: 22, fontWeight: 500, color: "#FFFFFF" }}>Rafael Leite</h2>
+              <p
+                className="mt-1"
+                style={{ fontSize: 11, color: "#C9A84C", fontWeight: 500, letterSpacing: "0.04em" }}
+              >
+                Fundador · Ortodontista · Professor · Empreendedor
               </p>
-              <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-                Rafael fundou a VERSA3D a partir da percepção das limitações do diagnóstico bidimensional na ortodontia — e da certeza de que a tomografia poderia substituir grande parte da documentação convencional, entregando diagnósticos mais precisos, previsíveis e clinicamente aplicáveis.
+              <p className="mt-4" style={{ color: "#94a3b8", fontSize: 13, lineHeight: 1.7 }}>
+                Sua atuação integra prática clínica, ensino, pesquisa e inovação, com foco no desenvolvimento de soluções que transformem informações complexas em decisões mais claras, seguras e previsíveis. Foi dessa visão que nasceu a VERSA3D, com o propósito de apoiar ortodontistas por meio de diagnósticos tridimensionais mais completos, objetivos e clinicamente relevantes. Atua como professor de graduação, coordenador de especialização em Ortodontia, ortodontista clínico e empreendedor, liderando iniciativas como a VERSA3D e a DentalMind. Especialista em Ortodontia e em DTM e Dor Orofacial, Mestre em Ortodontia e Doutorando em Odontopediatria.
               </p>
               <a
-                href="https://instagram.com/versa_3d"
+                href="https://instagram.com/rafael.leiteoliveira"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-gold-dark hover:underline"
+                className="mt-4 inline-block hover:underline"
+                style={{ color: "#C9A84C", fontSize: 11 }}
               >
-                <Instagram className="h-4 w-4" /> @versa_3d
+                @rafael.leiteoliveira
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Mission / Vision / Values */}
-      <section className="border-y border-border bg-secondary/40">
-        <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
-          <div className="grid gap-6 md:grid-cols-3">
-            {[
-              { icon: Target, title: "Missão", body: "Proporcionar diagnósticos ortodônticos mais precisos, previsíveis e acessíveis utilizando tecnologia 3D." },
-              { icon: Eye, title: "Visão", body: "Ser a referência técnica nacional em diagnóstico ortodôntico 3D." },
-              { icon: Shield, title: "Valores", body: "Precisão diagnóstica · Excelência técnica · Ciência · Inovação · Ética · Padronização." },
-            ].map((c) => (
-              <div key={c.title} className="rounded-2xl border border-border bg-background p-8">
-                <c.icon className="h-6 w-6 text-gold-dark" strokeWidth={1.5} />
-                <h3 className="mt-5 text-xl font-semibold">{c.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{c.body}</p>
-              </div>
+      {/* Team grid */}
+      <section className="bg-secondary">
+        <div className="mx-auto max-w-5xl px-6 py-14 md:py-16">
+          <div className="grid gap-4 md:grid-cols-2">
+            {TEAM.map((m) => (
+              <article
+                key={m.name}
+                className="rounded-xl bg-background p-4"
+                style={{ border: "0.5px solid #E8DFC8" }}
+              >
+                <div className="flex items-start gap-3">
+                  <div
+                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full"
+                    style={{ background: "#1C1A16" }}
+                  >
+                    <span style={{ color: "#C9A84C", fontSize: 12, fontWeight: 500 }}>{m.initials}</span>
+                  </div>
+                  <div className="min-w-0">
+                    <h3 style={{ fontSize: 14, fontWeight: 500 }} className="text-foreground">
+                      {m.name}
+                    </h3>
+                    <p style={{ fontSize: 11, color: "#A8893A", fontWeight: 500 }}>{m.role}</p>
+                  </div>
+                </div>
+                <p className="mt-3 text-muted-foreground" style={{ fontSize: 12, lineHeight: 1.6 }}>
+                  {m.bio}
+                </p>
+                {m.link && (
+                  <a
+                    href={m.link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 inline-block hover:underline"
+                    style={{ color: "#A8893A", fontSize: 11 }}
+                  >
+                    {m.link.label}
+                  </a>
+                )}
+              </article>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Tese */}
-      <section className="relative overflow-hidden bg-dark text-dark-foreground">
-        <div className="absolute inset-0 dot-grid opacity-40" />
-        <div className="relative mx-auto max-w-4xl px-6 py-14 md:py-16 text-center">
-          <p className="text-sm font-medium uppercase tracking-widest text-gold-dark">A Tese</p>
-          <blockquote className="mt-6 text-2xl font-medium leading-snug tracking-tight md:text-4xl">
-            "O diagnóstico determina diretamente o sucesso do tratamento. Tornar o complexo simples e diretamente aplicável à prática clínica — essa é a grande missão da VERSA3D."
-          </blockquote>
-          <p className="mt-8 text-sm text-dark-foreground/70">— Rafael Leite Oliveira, Fundador</p>
-          <div className="mt-10">
-            <Link
-              to="/contato"
-              className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-dark-foreground transition-colors hover:bg-white/10"
-            >
-              Fale conosco
-            </Link>
           </div>
         </div>
       </section>
