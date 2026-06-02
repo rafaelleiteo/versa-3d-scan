@@ -53,7 +53,7 @@ function Home() {
       <section className="relative overflow-hidden bg-secondary">
         <div className="relative mx-auto max-w-7xl px-6 py-14 md:py-16">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-sm font-medium uppercase tracking-widest text-gold-dark">Diagnóstico 3D</p>
+            <p className="text-[13px] font-semibold uppercase tracking-[0.08em] text-gold-dark">Diagnóstico 3D</p>
             <h1 className="mt-4 text-4xl font-bold leading-[1.05] tracking-tight text-foreground md:text-6xl lg:text-7xl">
               Diagnóstico Ortodôntico 3D com precisão real
             </h1>
@@ -86,7 +86,7 @@ function Home() {
       <section className="bg-secondary">
         <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-medium uppercase tracking-widest text-gold-dark">Diferenciais</p>
+            <p className="text-[13px] font-semibold uppercase tracking-[0.08em] text-gold-dark">Diferenciais</p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
               Por que o Protocolo VERSA3D?
             </h2>
@@ -123,7 +123,7 @@ function Home() {
       <section className="bg-background">
         <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-medium uppercase tracking-widest text-gold-dark">Como funciona</p>
+            <p className="text-[13px] font-semibold uppercase tracking-[0.08em] text-gold-dark">Como funciona</p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-foreground md:text-4xl">Três etapas para o diagnóstico completo</h2>
           </div>
           <div className="mt-16 grid gap-8 md:grid-cols-3">
@@ -147,7 +147,7 @@ function Home() {
       {/* Partner clinics */}
       <section className="bg-secondary" style={{ borderTop: "0.5px solid #E8DFC8", borderBottom: "0.5px solid #E8DFC8" }}>
         <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
-          <p className="text-center text-sm font-medium uppercase tracking-widest text-muted-foreground">
+          <p className="text-center text-[13px] font-semibold uppercase tracking-[0.08em] text-muted-foreground">
             Clínicas Credenciadas em todo o Brasil
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
@@ -164,7 +164,7 @@ function Home() {
       <section className="relative overflow-hidden bg-dark text-dark-foreground">
         <div className="relative mx-auto max-w-7xl px-6 py-14 md:py-16">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-medium uppercase tracking-widest text-primary">Ciência</p>
+            <p className="text-[13px] font-semibold uppercase tracking-[0.08em] text-primary">Ciência</p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-dark-foreground md:text-4xl">
               Baseado em evidência científica
             </h2>
