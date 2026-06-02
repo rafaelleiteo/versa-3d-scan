@@ -68,7 +68,8 @@ export function Navbar() {
             href={LOGIN_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden rounded-[20px] border border-[#2A2520] bg-transparent px-4 py-1.5 text-sm font-medium text-white transition-colors hover:text-dark-foreground md:inline-flex"
+            className="hidden rounded-[20px] bg-transparent px-4 py-1.5 text-sm font-medium text-white transition-colors hover:bg-white/5 md:inline-flex"
+            style={{ border: "0.5px solid rgba(255,255,255,0.3)" }}
           >
             Login
           </a>
