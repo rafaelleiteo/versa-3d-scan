@@ -33,7 +33,7 @@ export function Navbar() {
             onMouseEnter={() => setProtoOpen(true)}
             onMouseLeave={() => setProtoOpen(false)}
           >
-            <button className="flex items-center gap-1 text-sm text-[#E8DFC8] transition-colors hover:text-dark-foreground">
+            <button className="flex items-center gap-1 text-sm text-white transition-colors hover:text-dark-foreground">
               Protocolo <ChevronDown className="h-3.5 w-3.5" />
             </button>
             {protoOpen && (
@@ -56,7 +56,7 @@ export function Navbar() {
             <Link
               key={l.to}
               to={l.to}
-              className="text-sm text-[#E8DFC8] transition-colors hover:text-dark-foreground"
+              className="text-sm text-white transition-colors hover:text-dark-foreground"
               activeProps={{ className: "text-dark-foreground font-medium" }}
             >
               {l.label}
@@ -68,7 +68,7 @@ export function Navbar() {
             href={LOGIN_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden rounded-[20px] border border-[#2A2520] bg-transparent px-4 py-1.5 text-sm font-medium text-[#E8DFC8] transition-colors hover:text-dark-foreground md:inline-flex"
+            className="hidden rounded-[20px] border border-[#2A2520] bg-transparent px-4 py-1.5 text-sm font-medium text-white transition-colors hover:text-dark-foreground md:inline-flex"
           >
             Login
           </a>
@@ -92,7 +92,7 @@ export function Navbar() {
       {open && (
         <div className="border-t border-[#2A2520] bg-dark md:hidden">
           <nav className="flex flex-col px-6 py-4">
-            <div className="py-2 text-xs font-semibold uppercase tracking-wider text-[#E8DFC8]">Protocolo</div>
+            <div className="py-2 text-xs font-semibold uppercase tracking-wider text-white">Protocolo</div>
             {protocoloItems.map((item) => (
               <Link
                 key={item.label}
@@ -118,7 +118,7 @@ export function Navbar() {
                 href={LOGIN_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex w-fit rounded-[20px] border border-[#2A2520] px-4 py-1.5 text-sm font-medium text-[#E8DFC8]"
+                className="inline-flex w-fit rounded-[20px] border border-[#2A2520] px-4 py-1.5 text-sm font-medium text-white"
               >
                 Login
               </a>
