@@ -95,7 +95,7 @@ function QuemSomos() {
               >
                 Fundador · Ortodontista · Professor · Empreendedor
               </p>
-              <p className="mt-4" style={{ color: "#94a3b8", fontSize: 13, lineHeight: 1.7 }}>
+              <p className="mt-4" style={{ color: "#FFFFFF", fontSize: 13, lineHeight: 1.7 }}>
                 Sua atuação integra prática clínica, ensino, pesquisa e inovação, com foco no desenvolvimento de soluções que transformem informações complexas em decisões mais claras, seguras e previsíveis. Foi dessa visão que nasceu a VERSA3D, com o propósito de apoiar ortodontistas por meio de diagnósticos tridimensionais mais completos, objetivos e clinicamente relevantes. Atua como professor de graduação, coordenador de especialização em Ortodontia, ortodontista clínico e empreendedor, liderando iniciativas como a VERSA3D e a DentalMind. Especialista em Ortodontia e em DTM e Dor Orofacial, Mestre em Ortodontia e Doutorando em Odontopediatria.
               </p>
               <a
