@@ -71,8 +71,6 @@ function Home() {
               </a>
               <a
                 href={LOGIN_URL}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="inline-flex items-center rounded-[20px] border border-gold-dark bg-transparent px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/5"
               >
                 Fazer Login

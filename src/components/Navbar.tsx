@@ -66,8 +66,6 @@ export function Navbar() {
         <div className="flex items-center gap-3">
           <a
             href={LOGIN_URL}
-            target="_blank"
-            rel="noopener noreferrer"
             className="hidden rounded-[20px] bg-transparent px-4 py-1.5 text-sm font-medium text-white transition-colors hover:bg-white/5 md:inline-flex"
             style={{ border: "0.5px solid rgba(255,255,255,0.3)" }}
           >
@@ -117,8 +115,6 @@ export function Navbar() {
             <div className="mt-3 flex flex-col gap-2">
               <a
                 href={LOGIN_URL}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="inline-flex w-fit rounded-[20px] border border-[#2A2520] px-4 py-1.5 text-sm font-medium text-white"
               >
                 Login
