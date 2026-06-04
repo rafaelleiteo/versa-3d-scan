@@ -115,8 +115,6 @@ export function Navbar() {
             <div className="mt-3 flex flex-col gap-2">
               <a
                 href={LOGIN_URL}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="inline-flex w-fit rounded-[20px] border border-[#2A2520] px-4 py-1.5 text-sm font-medium text-white"
               >
                 Login
