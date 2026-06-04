@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight, Crosshair, Box, Activity, BookOpen, TrendingUp, MessageCircle, Clock } from "lucide-react";
 import { WHATSAPP_PROTOCOL, LOGIN_URL } from "@/lib/links";
+import { ScrollHero } from "@/components/ScrollHero";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -49,36 +50,9 @@ const CLINICS = [
 function Home() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-secondary">
-        <div className="relative mx-auto max-w-7xl px-6 py-14 md:py-16">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="text-[13px] font-semibold uppercase tracking-[0.08em] text-gold-dark">Diagnóstico 3D</p>
-            <h1 className="mt-4 text-4xl font-bold leading-[1.05] tracking-tight text-foreground md:text-6xl lg:text-7xl">
-              Diagnóstico Ortodôntico 3D com precisão real
-            </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
-              Cefalometria 3D baseada em tomografia de feixe cônico (TCFC) para ortodontistas que exigem mais do seu diagnóstico.
-            </p>
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-              <a
-                href={WHATSAPP_PROTOCOL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-[20px] bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:bg-[#E8C96A]"
-              >
-                Solicitar Protocolo <ArrowRight className="h-4 w-4" />
-              </a>
-              <a
-                href={LOGIN_URL}
-                className="inline-flex items-center rounded-[20px] border border-gold-dark bg-transparent px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/5"
-              >
-                Fazer Login
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Hero — scroll-driven 6 slides */}
+      <ScrollHero />
+
 
       {/* Features */}
       <section className="bg-secondary">
