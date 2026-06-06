@@ -1,38 +1,30 @@
 import { useEffect, useRef, useState } from "react";
-import slide01 from "@/assets/slide01.jpg.asset.json";
-import slide02 from "@/assets/slide02.jpg.asset.json";
-import slide03 from "@/assets/slide03.jpg.asset.json";
-import slide04 from "@/assets/slide04.jpg.asset.json";
-import slide05 from "@/assets/slide05.jpg.asset.json";
-import slide06 from "@/assets/slide06.jpg.asset.json";
-import slide07 from "@/assets/slide07.jpg.asset.json";
-import slide08 from "@/assets/slide08.jpg.asset.json";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
-type Slide = { img: string; alt: string; tag: string; text: string };
+type Slide = { img: string; tag: string; text: string };
 
 const SLIDES: Slide[] = [
-  { img: slide01.url, alt: "Protocolo VERSA3D", tag: "Protocolo VERSA3D", text: "Diagnóstico 3D completo para o seu paciente a partir da tomografia" },
-  { img: slide02.url, alt: "Atresia Maxilar", tag: "Atresia Maxilar", text: "Seja assertivo no diagnóstico de atresia e compensações de mordidas cruzadas" },
-  { img: slide03.url, alt: "Sutura Palatina", tag: "Sutura Palatina", text: "Avalie o grau de fusão da sutura palatina antes de decidir pela expansão" },
-  { img: slide04.url, alt: "Avaliação de ATM", tag: "Avaliação de ATM", text: "Analise espaço articular e posição condilar com precisão tridimensional" },
-  { img: slide05.url, alt: "Assimetrias Mandibular", tag: "Assimetrias Mandibular", text: "Mensure assimetrias mandibulares nos três planos com referências confiáveis" },
-  { img: slide06.url, alt: "Vias Aéreas", tag: "Vias Aéreas", text: "Volume e morfologia das vias aéreas superiores avaliados tridimensionalmente" },
-  { img: slide07.url, alt: "Sagital e Vertical", tag: "Sagital e Vertical", text: "Diagnóstico além do plano sagital — também nos planos vertical e transversal" },
-  { img: slide08.url, alt: "Suporte Ósseo", tag: "Suporte Ósseo", text: "Avalie o suporte ósseo dente a dente para um planejamento ortodôntico seguro" },
+  { img: "/slide01.png", tag: "Protocolo VERSA3D", text: "Diagnóstico 3D completo para o seu paciente a partir da tomografia" },
+  { img: "/slide02.png", tag: "Atresia Maxilar", text: "Seja assertivo no diagnóstico de atresia e compensações de mordidas cruzadas" },
+  { img: "/slide03.png", tag: "Sutura Palatina", text: "O grau de fusão da sutura palatina define se a expansão maxilar é viável ou requer cirurgia" },
+  { img: "/slide04.png", tag: "Avaliação de ATM", text: "Avaliação articular com posição condilar, anatomia, espaço articular e identificação de alterações importantes" },
+  { img: "/slide05.png", tag: "Assimetrias Mandibular", text: "Identifique assimetrias mandibulares esqueléticas ou funcionais — precisão que o 2D não entrega" },
+  { img: "/slide06.png", tag: "Vias Aéreas", text: "Volume, área e morfologia das vias aéreas superiores e medidas cefalométricas essenciais para diagnóstico de apneia" },
+  { img: "/slide07.png", tag: "Sagital e Vertical", text: "As consagradas análises sagitais e verticais agora com precisão e clareza total para apresentar ao seu paciente" },
+  { img: "/slide08.png", tag: "Suporte Ósseo", text: "Avalie o suporte ósseo dos dentes com cortes tomográficos precisos — essencial para diagnóstico periodontal e planejamento de implantes" },
 ];
 
 const N = SLIDES.length;
 
 const POSITIONS = [
-  { x: -265, ry: 22, s: 0.73, o: 0.25, w: 150, h: 220, z: 1 }, // -2 far left
-  { x: -148, ry: 14, s: 0.86, o: 0.55, w: 190, h: 275, z: 2 }, // -1 left
-  { x: 0,    ry: 0,  s: 1,    o: 1,    w: 250, h: 360, z: 3 }, // 0 center
-  { x: 148,  ry: -14, s: 0.86, o: 0.55, w: 190, h: 275, z: 2 }, // +1 right
-  { x: 265,  ry: -22, s: 0.73, o: 0.25, w: 150, h: 220, z: 1 }, // +2 far right
+  { x: -265, ry: 22, s: 0.73, o: 0.25, w: 150, h: 220, z: 1 },
+  { x: -148, ry: 14, s: 0.86, o: 0.55, w: 190, h: 275, z: 2 },
+  { x: 0, ry: 0, s: 1, o: 1, w: 250, h: 360, z: 3 },
+  { x: 148, ry: -14, s: 0.86, o: 0.55, w: 190, h: 275, z: 2 },
+  { x: 265, ry: -22, s: 0.73, o: 0.25, w: 150, h: 220, z: 1 },
 ];
 
-function offsetClass(i: number, active: number) {
-  // signed shortest offset in [-N/2, N/2]
+function shortestOffset(i: number, active: number) {
   let d = i - active;
   if (d > N / 2) d -= N;
   if (d < -N / 2) d += N;
@@ -48,17 +40,17 @@ export function HeroCarousel() {
   const dragStartX = useRef(0);
   const dragAcc = useRef(0);
 
-  // Typewriter
+  const go = (dir: number) => setActive((a) => (a + dir + N) % N);
+
   useEffect(() => {
     const slide = SLIDES[active];
     let timer: ReturnType<typeof setTimeout>;
-
     if (phase === "typing") {
       if (charIdx.current < slide.text.length) {
         timer = setTimeout(() => {
           charIdx.current += 1;
           setTyped(slide.text.slice(0, charIdx.current));
-        }, 36 + Math.random() * 18);
+        }, 36);
       } else {
         timer = setTimeout(() => setPhase("pause"), 0);
       }
@@ -77,22 +69,28 @@ export function HeroCarousel() {
         }, 0);
       }
     }
-
     return () => clearTimeout(timer);
   }, [typed, phase, active]);
 
-  // Reset typing index when slide changes externally (drag)
-  const lastActiveForReset = useRef(active);
+  const lastActive = useRef(active);
   useEffect(() => {
-    if (lastActiveForReset.current !== active) {
-      lastActiveForReset.current = active;
+    if (lastActive.current !== active) {
+      lastActive.current = active;
       charIdx.current = 0;
       setTyped("");
       setPhase("typing");
     }
   }, [active]);
 
-  // Drag handlers
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft") go(-1);
+      else if (e.key === "ArrowRight") go(1);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
   const onPointerDown = (e: React.PointerEvent) => {
     dragging.current = true;
     dragStartX.current = e.clientX;
@@ -107,58 +105,76 @@ export function HeroCarousel() {
     if (!dragging.current) return;
     dragging.current = false;
     const d = dragAcc.current;
-    if (Math.abs(d) > 60) {
-      setActive((a) => (a + (d < 0 ? 1 : N - 1)) % N);
-    }
+    if (Math.abs(d) > 60) go(d < 0 ? 1 : -1);
   };
 
   return (
-    <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-white">
+    <section className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-white py-16">
       <div className="relative flex w-full flex-col items-center px-6">
-        {/* Cards stage */}
-        <div
-          className="relative h-[420px] w-full max-w-[900px] select-none"
-          style={{ perspective: "1400px", cursor: dragging.current ? "grabbing" : "grab" }}
-          onPointerDown={onPointerDown}
-          onPointerMove={onPointerMove}
-          onPointerUp={onPointerUp}
-          onPointerCancel={onPointerUp}
-        >
-          {SLIDES.map((s, i) => {
-            const off = offsetClass(i, active);
-            const visible = Math.abs(off) <= 2;
-            const pos = POSITIONS[off + 2] ?? POSITIONS[2];
-            return (
-              <div
-                key={i}
-                className="absolute left-1/2 top-1/2"
-                style={{
-                  width: pos.w,
-                  height: pos.h,
-                  marginLeft: -pos.w / 2,
-                  marginTop: -pos.h / 2,
-                  transform: `translateX(${pos.x}px) rotateY(${pos.ry}deg) scale(${pos.s})`,
-                  opacity: visible ? pos.o : 0,
-                  zIndex: pos.z,
-                  transformStyle: "preserve-3d",
-                  transition: "transform 0.9s cubic-bezier(0.22,1,0.36,1), opacity 0.9s cubic-bezier(0.22,1,0.36,1), width 0.9s, height 0.9s, margin 0.9s",
-                  borderRadius: 14,
-                  boxShadow: "0 18px 50px rgba(0,0,0,0.18)",
-                  background: "#000",
-                  overflow: "hidden",
-                  pointerEvents: visible ? "auto" : "none",
-                }}
-                onClick={() => off !== 0 && setActive(i)}
-              >
-                <img
-                  src={s.img}
-                  alt={s.alt}
-                  style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: 14 }}
-                  draggable={false}
-                />
-              </div>
-            );
-          })}
+        {/* Stage */}
+        <div className="relative w-full max-w-[1000px]">
+          <div
+            className="relative mx-auto h-[420px] w-full max-w-[900px] select-none"
+            style={{ perspective: "1400px", cursor: dragging.current ? "grabbing" : "grab" }}
+            onPointerDown={onPointerDown}
+            onPointerMove={onPointerMove}
+            onPointerUp={onPointerUp}
+            onPointerCancel={onPointerUp}
+          >
+            {SLIDES.map((s, i) => {
+              const off = shortestOffset(i, active);
+              const visible = Math.abs(off) <= 2;
+              const pos = POSITIONS[off + 2] ?? POSITIONS[2];
+              return (
+                <div
+                  key={i}
+                  className="absolute left-1/2 top-1/2"
+                  style={{
+                    width: pos.w,
+                    height: pos.h,
+                    marginLeft: -pos.w / 2,
+                    marginTop: -pos.h / 2,
+                    transform: `translateX(${pos.x}px) rotateY(${pos.ry}deg) scale(${pos.s})`,
+                    opacity: visible ? pos.o : 0,
+                    zIndex: pos.z,
+                    transformStyle: "preserve-3d",
+                    transition: "transform 0.9s cubic-bezier(0.22,1,0.36,1), opacity 0.9s cubic-bezier(0.22,1,0.36,1), width 0.9s, height 0.9s, margin 0.9s",
+                    borderRadius: 14,
+                    boxShadow: "0 18px 50px rgba(0,0,0,0.18)",
+                    background: "#000",
+                    overflow: "hidden",
+                    pointerEvents: visible ? "auto" : "none",
+                  }}
+                  onClick={() => off !== 0 && setActive(i)}
+                >
+                  <img
+                    src={s.img}
+                    alt=""
+                    style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: 14 }}
+                    draggable={false}
+                  />
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Arrows */}
+          <button
+            onClick={() => go(-1)}
+            aria-label="Anterior"
+            className="absolute left-2 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#12100D] shadow-sm transition hover:bg-[#FAFAF8]"
+            style={{ border: "0.5px solid #E8DFC8" }}
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+          <button
+            onClick={() => go(1)}
+            aria-label="Próximo"
+            className="absolute right-2 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#12100D] shadow-sm transition hover:bg-[#FAFAF8]"
+            style={{ border: "0.5px solid #E8DFC8" }}
+          >
+            <ChevronRight className="h-5 w-5" />
+          </button>
         </div>
 
         {/* Typing box */}
@@ -189,18 +205,39 @@ export function HeroCarousel() {
           >
             {SLIDES[active].tag}
           </span>
-          <p
-            style={{
-              marginTop: 10,
-              fontSize: 14,
-              color: "#12100D",
-              lineHeight: 1.5,
-              minHeight: 44,
-            }}
-          >
+          <p style={{ marginTop: 10, fontSize: 14, color: "#12100D", lineHeight: 1.5, minHeight: 44 }}>
             {typed}
             <span style={{ display: "inline-block", width: 1, marginLeft: 2, background: "#12100D", height: "1em", verticalAlign: "-2px", animation: "caretBlink 1s steps(2) infinite" }} />
           </p>
+        </div>
+
+        {/* Dots */}
+        <div className="mt-6 flex items-center justify-center gap-2">
+          {SLIDES.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setActive(i)}
+              aria-label={`Slide ${i + 1}`}
+              style={{
+                height: 8,
+                width: i === active ? 32 : 8,
+                borderRadius: 999,
+                background: i === active ? "#C9A84C" : "#E8DFC8",
+                transition: "all 0.3s ease",
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Hero text */}
+        <div className="mt-12 text-center" style={{ maxWidth: 520 }}>
+          <p style={{ fontSize: 12, fontWeight: 700, color: "#A8893A", letterSpacing: "0.1em", textTransform: "uppercase" }}>
+            Diagnóstico Ortodôntico 3D
+          </p>
+          <h1 style={{ marginTop: 14, fontSize: 36, lineHeight: 1.15, color: "#12100D" }}>
+            <span style={{ fontWeight: 500 }}>Precisão real.</span>{" "}
+            <span style={{ fontWeight: 300 }}>Diagnóstico tridimensional para ortodontistas que exigem mais.</span>
+          </h1>
         </div>
       </div>
 
