@@ -1,7 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logoAsset from "@/assets/versa3d-logo.png.asset.json";
-
-const LOGO_SRC = logoAsset.url;
+const LOGO_SRC = "/logo (4).png";
 
 export function Footer() {
   return (

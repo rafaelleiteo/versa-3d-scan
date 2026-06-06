@@ -66,19 +66,6 @@ function Home() {
               Análise tridimensional completa em um único protocolo, baseado em evidência científica.
             </p>
           </div>
-          <figure className="mx-auto mt-12 max-w-[900px] px-2">
-            <div className="overflow-hidden rounded-xl border border-border bg-background">
-              <img
-                src="https://versa3d.com.br/assets/images/diagnostico-3d-dipo24-1.jpeg"
-                alt="Avaliação de assimetria mandibular — Protocolo VERSA3D"
-                className="h-full max-h-[480px] w-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            <figcaption className="mt-3 text-center text-sm text-muted-foreground">
-              Avaliação de assimetria mandibular — Protocolo VERSA3D
-            </figcaption>
-          </figure>
           <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {features.map((f) => (
               <div key={f.title} className="rounded-2xl border border-border bg-background p-8 transition-colors hover:border-gold-dark/40" style={{ borderWidth: "0.5px" }}>

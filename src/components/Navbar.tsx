@@ -2,9 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 import { WHATSAPP_PROTOCOL, LOGIN_URL } from "@/lib/links";
-import logoAsset from "@/assets/versa3d-logo.png.asset.json";
-
-const LOGO_SRC = logoAsset.url;
+const LOGO_SRC = "/logo (4).png";
 
 const protocoloItems = [
   { to: "/servicos", label: "Protocolo VERSA3D", hash: "versa3d" },
