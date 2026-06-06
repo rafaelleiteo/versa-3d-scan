@@ -1,13 +1,14 @@
 import { Link } from "@tanstack/react-router";
+import logoAsset from "@/assets/versa3d-logo.png.asset.json";
 
-const LOGO_SRC = "https://www.versa3d.com.br/assets/images/logo-versa1-1-copia-copia-1.png";
+const LOGO_SRC = logoAsset.url;
 
 export function Footer() {
   return (
     <footer className="border-t border-[#2A2520] bg-dark text-dark-foreground">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-4">
         <div>
-          <img src={LOGO_SRC} alt="VERSA3D" className="h-8 w-auto" />
+          <img src={LOGO_SRC} alt="VERSA3D" className="h-8 w-auto" style={{ objectFit: "contain" }} />
           <p className="mt-3 text-sm text-[#6A6560]">
             Diagnóstico Ortodôntico 3D. Precisão. Inovação. Versatilidade.
           </p>
