@@ -2,8 +2,9 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 import { WHATSAPP_PROTOCOL, LOGIN_URL } from "@/lib/links";
+import logoAsset from "@/assets/versa3d-logo.png.asset.json";
 
-const LOGO_SRC = "https://www.versa3d.com.br/assets/images/logo-versa1-1-copia-copia-1.png";
+const LOGO_SRC = logoAsset.url;
 
 const protocoloItems = [
   { to: "/servicos", label: "Protocolo VERSA3D", hash: "versa3d" },
@@ -25,7 +26,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-[#2A2520] bg-dark text-dark-foreground backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <Link to="/" className="flex items-center">
-          <img src={LOGO_SRC} alt="VERSA3D" height={32} className="h-8 w-auto" />
+          <img src={LOGO_SRC} alt="VERSA3D" height={32} className="h-8 w-auto" style={{ objectFit: "contain" }} />
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
           <div

@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight, Crosshair, Box, Activity, BookOpen, TrendingUp, MessageCircle, Clock } from "lucide-react";
 import { WHATSAPP_PROTOCOL, LOGIN_URL } from "@/lib/links";
-import { ScrollHero } from "@/components/ScrollHero";
+import { HeroCarousel } from "@/components/HeroCarousel";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -50,8 +50,8 @@ const CLINICS = [
 function Home() {
   return (
     <>
-      {/* Hero — scroll-driven 6 slides */}
-      <ScrollHero />
+      {/* Hero — perspective carousel with typing box */}
+      <HeroCarousel />
 
 
       {/* Features */}
