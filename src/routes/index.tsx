@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight, Crosshair, Box, Activity, BookOpen, TrendingUp, MessageCircle, Clock } from "lucide-react";
 import { WHATSAPP_PROTOCOL, LOGIN_URL } from "@/lib/links";
 import { HeroCarousel } from "@/components/HeroCarousel";
+import { ClinicsMarquee } from "@/components/ClinicsMarquee";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -103,21 +104,8 @@ function Home() {
         </div>
       </section>
 
-      {/* Partner clinics */}
-      <section className="bg-secondary" style={{ borderTop: "0.5px solid #E8DFC8", borderBottom: "0.5px solid #E8DFC8" }}>
-        <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
-          <p className="text-center text-[13px] font-semibold uppercase tracking-[0.08em] text-muted-foreground">
-            Clínicas Credenciadas em todo o Brasil
-          </p>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            {CLINICS.map((c) => (
-              <div key={c.name} className="flex h-16 min-w-[140px] items-center justify-center rounded-lg bg-background p-3" style={{ border: "0.5px solid #E8DFC8" }}>
-                <img src={c.logo} alt={c.name} className="max-h-12 max-w-full object-contain" loading="lazy" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Partner clinics marquee */}
+      <ClinicsMarquee />
 
       {/* Evidence-based */}
       <section className="relative overflow-hidden bg-dark text-dark-foreground">
