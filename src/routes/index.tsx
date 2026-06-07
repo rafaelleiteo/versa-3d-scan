@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight, Crosshair, Box, Activity, BookOpen, TrendingUp, MessageCircle, Clock } from "lucide-react";
-import { WHATSAPP_PROTOCOL, LOGIN_URL } from "@/lib/links";
+import { WHATSAPP_PROTOCOL } from "@/lib/links";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { ClinicsMarquee } from "@/components/ClinicsMarquee";
 
