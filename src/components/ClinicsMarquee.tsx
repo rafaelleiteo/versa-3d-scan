@@ -5,13 +5,12 @@ const LOGOS = [
   { src: "/facenter.png", alt: "FACENTER" },
   { src: "/datax.png", alt: "DATA X" },
   { src: "/cerdo.png", alt: "CERDO" },
-  { src: "/logo-rorrj.png", alt: "RORRJ" },
-  { src: "/logo-inova.png", alt: "INOVA" },
-  { src: "/logo-ima.png", alt: "IMA" },
-  { src: "/logo-rrimagem.png", alt: "RR IMAGEM" },
-  { src: "/logo-odontox-rj.png", alt: "ODONTO-X RJ" },
-  { src: "/logo-odontoimagem45.png", alt: "ODONTO IMAGEM 45" },
-  { src: "/logo-odontox-ba.png", alt: "ODONTO X BA" },
+  { src: "/rorrj.png", alt: "RORRJ" },
+  { src: "/inova.png", alt: "INOVA" },
+  { src: "/ima.png", alt: "IMA" },
+  { src: "/rr_imagem.png", alt: "RR IMAGEM" },
+  { src: "/odontoz-rj.png", alt: "ODONTO-X RJ" },
+  { src: "/odontoimagem45.png", alt: "ODONTO IMAGEM 45" },
 ];
 
 export function ClinicsMarquee() {

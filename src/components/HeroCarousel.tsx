@@ -17,11 +17,11 @@ const SLIDES: Slide[] = [
 const N = SLIDES.length;
 
 const POSITIONS = [
-  { x: -360, ry: 22, s: 0.73, o: 0.25, w: 200, h: 420, z: 1 },
-  { x: -200, ry: 14, s: 0.86, o: 0.55, w: 260, h: 520, z: 2 },
-  { x: 0, ry: 0, s: 1, o: 1, w: 360, h: 640, z: 3 },
-  { x: 200, ry: -14, s: 0.86, o: 0.55, w: 260, h: 520, z: 2 },
-  { x: 360, ry: -22, s: 0.73, o: 0.25, w: 200, h: 420, z: 1 },
+  { x: -300, ry: 22, s: 0.73, o: 0.25, w: 160, h: 300, z: 1 },
+  { x: -168, ry: 14, s: 0.86, o: 0.55, w: 210, h: 380, z: 2 },
+  { x: 0, ry: 0, s: 1, o: 1, w: 280, h: 480, z: 3 },
+  { x: 168, ry: -14, s: 0.86, o: 0.55, w: 210, h: 380, z: 2 },
+  { x: 300, ry: -22, s: 0.73, o: 0.25, w: 160, h: 300, z: 1 },
 ];
 
 const WHATSAPP_URL = "https://api.whatsapp.com/send/?phone=5524992000389&text=Olá!+Desejo+informações+sobre+o+Protocolo+VERSA3D";
@@ -111,12 +111,12 @@ export function HeroCarousel() {
   };
 
   return (
-    <section className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-white" style={{ minHeight: "90vh" }}>
+    <section className="relative flex w-full flex-col items-center overflow-hidden bg-white" style={{ maxHeight: "96vh", paddingTop: 16 }}>
       <div className="relative flex w-full flex-col items-center px-6">
         {/* Stage */}
         <div className="relative w-full max-w-[1200px]">
           <div
-            className="relative mx-auto h-[680px] w-full max-w-[1100px] select-none"
+            className="relative mx-auto h-[520px] w-full max-w-[1100px] select-none"
             style={{ perspective: "1400px", cursor: dragging.current ? "grabbing" : "grab" }}
             onPointerDown={onPointerDown}
             onPointerMove={onPointerMove}
@@ -181,14 +181,14 @@ export function HeroCarousel() {
 
         {/* Typing box */}
         <div
-          className="relative z-10 mx-auto w-full max-w-[640px]"
+          className="relative z-10 mx-auto w-full max-w-[560px]"
           style={{
-            marginTop: -140,
+            marginTop: -100,
             background: "#FFFFFF",
             borderRadius: 14,
             boxShadow: "0 8px 32px rgba(0,0,0,0.11)",
             border: "0.5px solid #ece8e0",
-            padding: "20px 28px 20px",
+            padding: "16px 24px 16px",
           }}
         >
           <span
@@ -207,7 +207,7 @@ export function HeroCarousel() {
           >
             {SLIDES[active].tag}
           </span>
-          <p style={{ marginTop: 10, fontSize: 14, color: "#12100D", lineHeight: 1.5, minHeight: 44 }}>
+          <p style={{ marginTop: 8, fontSize: 13, color: "#12100D", lineHeight: 1.45, minHeight: 38 }}>
             {typed}
             <span style={{ display: "inline-block", width: 1, marginLeft: 2, background: "#12100D", height: "1em", verticalAlign: "-2px", animation: "caretBlink 1s steps(2) infinite" }} />
           </p>
@@ -217,7 +217,7 @@ export function HeroCarousel() {
             rel="noopener noreferrer"
             style={{
               display: "inline-block",
-              marginTop: 14,
+              marginTop: 10,
               background: "#C9A84C",
               color: "#12100D",
               borderRadius: 20,
@@ -232,7 +232,7 @@ export function HeroCarousel() {
         </div>
 
         {/* Dots */}
-        <div className="mt-6 flex items-center justify-center gap-2">
+        <div className="mt-4 flex items-center justify-center gap-2">
           {SLIDES.map((_, i) => (
             <button
               key={i}
@@ -250,11 +250,11 @@ export function HeroCarousel() {
         </div>
 
         {/* Hero text */}
-        <div className="mt-12 text-center" style={{ maxWidth: 520 }}>
-          <p style={{ fontSize: 12, fontWeight: 700, color: "#A8893A", letterSpacing: "0.1em", textTransform: "uppercase" }}>
+        <div className="mt-6 text-center" style={{ maxWidth: 520 }}>
+          <p style={{ fontSize: 11, fontWeight: 700, color: "#A8893A", letterSpacing: "0.1em", textTransform: "uppercase" }}>
             Diagnóstico Ortodôntico 3D
           </p>
-          <h1 style={{ marginTop: 14, fontSize: 36, lineHeight: 1.15, color: "#12100D" }}>
+          <h1 style={{ marginTop: 8, fontSize: 26, lineHeight: 1.15, color: "#12100D" }}>
             <span style={{ fontWeight: 500 }}>Precisão real.</span>{" "}
             <span style={{ fontWeight: 300 }}>Diagnóstico tridimensional para ortodontistas que exigem mais.</span>
           </h1>
