@@ -17,12 +17,14 @@ const SLIDES: Slide[] = [
 const N = SLIDES.length;
 
 const POSITIONS = [
-  { x: -265, ry: 22, s: 0.73, o: 0.25, w: 150, h: 220, z: 1 },
-  { x: -148, ry: 14, s: 0.86, o: 0.55, w: 190, h: 275, z: 2 },
-  { x: 0, ry: 0, s: 1, o: 1, w: 250, h: 360, z: 3 },
-  { x: 148, ry: -14, s: 0.86, o: 0.55, w: 190, h: 275, z: 2 },
-  { x: 265, ry: -22, s: 0.73, o: 0.25, w: 150, h: 220, z: 1 },
+  { x: -360, ry: 22, s: 0.73, o: 0.25, w: 200, h: 420, z: 1 },
+  { x: -200, ry: 14, s: 0.86, o: 0.55, w: 260, h: 520, z: 2 },
+  { x: 0, ry: 0, s: 1, o: 1, w: 360, h: 640, z: 3 },
+  { x: 200, ry: -14, s: 0.86, o: 0.55, w: 260, h: 520, z: 2 },
+  { x: 360, ry: -22, s: 0.73, o: 0.25, w: 200, h: 420, z: 1 },
 ];
+
+const WHATSAPP_URL = "https://api.whatsapp.com/send/?phone=5524992000389&text=Olá!+Desejo+informações+sobre+o+Protocolo+VERSA3D";
 
 function shortestOffset(i: number, active: number) {
   let d = i - active;
@@ -109,12 +111,12 @@ export function HeroCarousel() {
   };
 
   return (
-    <section className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-white py-16">
+    <section className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-white" style={{ minHeight: "90vh" }}>
       <div className="relative flex w-full flex-col items-center px-6">
         {/* Stage */}
-        <div className="relative w-full max-w-[1000px]">
+        <div className="relative w-full max-w-[1200px]">
           <div
-            className="relative mx-auto h-[420px] w-full max-w-[900px] select-none"
+            className="relative mx-auto h-[680px] w-full max-w-[1100px] select-none"
             style={{ perspective: "1400px", cursor: dragging.current ? "grabbing" : "grab" }}
             onPointerDown={onPointerDown}
             onPointerMove={onPointerMove}
@@ -181,12 +183,12 @@ export function HeroCarousel() {
         <div
           className="relative z-10 mx-auto w-full max-w-[640px]"
           style={{
-            marginTop: -96,
+            marginTop: -140,
             background: "#FFFFFF",
             borderRadius: 14,
             boxShadow: "0 8px 32px rgba(0,0,0,0.11)",
             border: "0.5px solid #ece8e0",
-            padding: "20px 28px 18px",
+            padding: "20px 28px 20px",
           }}
         >
           <span
@@ -209,6 +211,24 @@ export function HeroCarousel() {
             {typed}
             <span style={{ display: "inline-block", width: 1, marginLeft: 2, background: "#12100D", height: "1em", verticalAlign: "-2px", animation: "caretBlink 1s steps(2) infinite" }} />
           </p>
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-block",
+              marginTop: 14,
+              background: "#C9A84C",
+              color: "#12100D",
+              borderRadius: 20,
+              padding: "10px 24px",
+              fontSize: 13,
+              fontWeight: 600,
+              textDecoration: "none",
+            }}
+          >
+            Solicitar Protocolo →
+          </a>
         </div>
 
         {/* Dots */}
