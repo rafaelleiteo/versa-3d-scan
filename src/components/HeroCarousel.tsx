@@ -17,12 +17,14 @@ const SLIDES: Slide[] = [
 const N = SLIDES.length;
 
 const POSITIONS = [
-  { x: -265, ry: 22, s: 0.73, o: 0.25, w: 150, h: 220, z: 1 },
-  { x: -148, ry: 14, s: 0.86, o: 0.55, w: 190, h: 275, z: 2 },
-  { x: 0, ry: 0, s: 1, o: 1, w: 250, h: 360, z: 3 },
-  { x: 148, ry: -14, s: 0.86, o: 0.55, w: 190, h: 275, z: 2 },
-  { x: 265, ry: -22, s: 0.73, o: 0.25, w: 150, h: 220, z: 1 },
+  { x: -360, ry: 22, s: 0.73, o: 0.25, w: 200, h: 420, z: 1 },
+  { x: -200, ry: 14, s: 0.86, o: 0.55, w: 260, h: 520, z: 2 },
+  { x: 0, ry: 0, s: 1, o: 1, w: 360, h: 640, z: 3 },
+  { x: 200, ry: -14, s: 0.86, o: 0.55, w: 260, h: 520, z: 2 },
+  { x: 360, ry: -22, s: 0.73, o: 0.25, w: 200, h: 420, z: 1 },
 ];
+
+const WHATSAPP_URL = "https://api.whatsapp.com/send/?phone=5524992000389&text=Olá!+Desejo+informações+sobre+o+Protocolo+VERSA3D";
 
 function shortestOffset(i: number, active: number) {
   let d = i - active;
