@@ -38,15 +38,6 @@ const metrics = [
   { value: "100% 3D", label: "sem sobreposições" },
 ];
 
-const CLINICS = [
-  { name: "Data X Radiologia", logo: "https://versa3d.com.br/assets/images/images-1.png" },
-  { name: "CERO Imagem Digital", logo: "https://versa3d.com.br/assets/images/logocero.png" },
-  { name: "CEDT Radiologia Odontológica", logo: "https://versa3d.com.br/assets/images/cropped-cedt-rad-e-tomografia-odont-ltda-logo.png" },
-  { name: "Facenter", logo: "https://versa3d.com.br/assets/images/share-img.jpeg" },
-  { name: "RR Imagem", logo: "https://versa3d.com.br/assets/images/images-3.png" },
-  { name: "CERDO", logo: "https://versa3d.com.br/assets/images/screenshot-6.jpg" },
-  { name: "Oral Rad", logo: "https://versa3d.com.br/assets/images/images.jpg" },
-];
 
 function Home() {
   return (
