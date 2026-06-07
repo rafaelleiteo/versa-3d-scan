@@ -29,19 +29,19 @@ type Clinic = {
 type CityGroup = { city: string; clinics: Clinic[] };
 
 const LOGOS = {
-  cedt: "https://versa3d.com.br/assets/images/cropped-cedt-rad-e-tomografia-odont-ltda-logo.png",
-  datax: "https://versa3d.com.br/assets/images/images-1.png",
-  facenter: "https://versa3d.com.br/assets/images/share-img.jpeg",
-  cero: "https://versa3d.com.br/assets/images/logocero.png",
-  oralrad: "https://versa3d.com.br/assets/images/images.jpg",
-  cerdo: "https://versa3d.com.br/assets/images/screenshot-6.jpg",
-  rr: "https://versa3d.com.br/assets/images/images-3.png",
-  inova: "https://static.wixstatic.com/media/16936e_7e382a1d74c645bfbb13abbc1fc2a0a1~mv2.png/v1/fill/w_358,h_86,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/LOGO%20ALTERNATIVO%20SEM%20FUNDO.png",
-  rorrj: "https://static.wixstatic.com/media/046bbe_41f4a7f148d944b59466f5987fb1ba04~mv2.png/v1/crop/x_0,y_0,w_209,h_63/fill/w_206,h_62,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo-rorrj-header-fundobranco.png",
-  ima: "https://imaradiologia.com.br/wp-content/uploads/2020/05/logo-ima-small-blue.png",
-  odontox: "https://www.odontox.com.br/wp-content/uploads/2025/07/lg1_30a.png",
-  odontoimagem45: "https://www.odontoimagem45.com.br/wp-content/uploads/2023/10/OF-ODONTO-IMAGEM-STORY-35.png",
-  odontoxba: "https://odontoxpauloafonso.radiomemory.com.br/efs3/odontoxpauloafonso.radiomemory.com.br/arquivos_imagens/logo/827f3bd244080ccf20caaecf183f7823.jpeg",
+  cedt: "/cedt.png",
+  datax: "/datax.png",
+  facenter: "/facenter.png",
+  cero: "/logocero.png",
+  oralrad: "/oralrad.png",
+  cerdo: "/cerdo.png",
+  rr: "/rr_imagem.png",
+  inova: "/inova.png",
+  rorrj: "/rorrj.png",
+  ima: "/ima.png",
+  odontox: "/odontoz-rj.png",
+  odontoimagem45: "/odontoimagem45.png",
+  odontoxba: "/odontoz-rj.png",
 };
 
 const GROUPS: CityGroup[] = [
@@ -203,8 +203,13 @@ function ClinicCard({ clinic }: { clinic: Clinic }) {
       style={{ border: "0.5px solid #E8DFC8" }}
     >
       {clinic.logo && (
-        <div className="mb-3 flex h-12 items-center">
-          <img src={clinic.logo} alt={clinic.name} className="max-h-12 object-contain" loading="lazy" />
+        <div className="mb-3 flex h-14 items-center justify-center">
+          <img
+            src={clinic.logo}
+            alt={clinic.name}
+            loading="lazy"
+            style={{ maxHeight: 48, maxWidth: 140, objectFit: "contain" }}
+          />
         </div>
       )}
       <h3 style={{ fontSize: 15, fontWeight: 500, color: "#12100D" }}>{clinic.name}</h3>
