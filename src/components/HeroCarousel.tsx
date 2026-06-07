@@ -111,12 +111,12 @@ export function HeroCarousel() {
   };
 
   return (
-    <section className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-white py-16">
+    <section className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-white" style={{ minHeight: "90vh" }}>
       <div className="relative flex w-full flex-col items-center px-6">
         {/* Stage */}
-        <div className="relative w-full max-w-[1000px]">
+        <div className="relative w-full max-w-[1200px]">
           <div
-            className="relative mx-auto h-[420px] w-full max-w-[900px] select-none"
+            className="relative mx-auto h-[680px] w-full max-w-[1100px] select-none"
             style={{ perspective: "1400px", cursor: dragging.current ? "grabbing" : "grab" }}
             onPointerDown={onPointerDown}
             onPointerMove={onPointerMove}
@@ -183,12 +183,12 @@ export function HeroCarousel() {
         <div
           className="relative z-10 mx-auto w-full max-w-[640px]"
           style={{
-            marginTop: -96,
+            marginTop: -140,
             background: "#FFFFFF",
             borderRadius: 14,
             boxShadow: "0 8px 32px rgba(0,0,0,0.11)",
             border: "0.5px solid #ece8e0",
-            padding: "20px 28px 18px",
+            padding: "20px 28px 20px",
           }}
         >
           <span
@@ -211,6 +211,24 @@ export function HeroCarousel() {
             {typed}
             <span style={{ display: "inline-block", width: 1, marginLeft: 2, background: "#12100D", height: "1em", verticalAlign: "-2px", animation: "caretBlink 1s steps(2) infinite" }} />
           </p>
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-block",
+              marginTop: 14,
+              background: "#C9A84C",
+              color: "#12100D",
+              borderRadius: 20,
+              padding: "10px 24px",
+              fontSize: 13,
+              fontWeight: 600,
+              textDecoration: "none",
+            }}
+          >
+            Solicitar Protocolo →
+          </a>
         </div>
 
         {/* Dots */}
